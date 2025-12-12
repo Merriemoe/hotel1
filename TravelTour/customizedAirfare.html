@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimberley Travel & Tour | Flights - Customized</title>
+    <link rel="icon" type="image/png" href="img/kimberley.jpg">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="customizedAirfareStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar collapsed" id="sidebar">
+
+            <!-- Hamburger inside sidebar -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul>
+                    <li class="menu-item " data-menu="hotel">
+                        <a href="#">
+                            <i class="fa-solid fa-hotel"></i>
+                            <span class="text">Hotel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Domestic hotels</a></li>
+                            <li><a href="#">Overseas Hotels</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item active" data-menu="flight">
+                        <a href="#">
+                            <i class="fa-solid fa-plane"></i>
+                            <span class="text">Airfare</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticAirfare.html">Domestic/International,Hong Kong,Macao
+                                    andTaiwan</a></li>
+                            <li><a href="mapAirfare.html">Discounted airfares</a></li>
+                            <li><a href="flightStatusAirfare.html" >Flight status</a></li>
+                            <li><a href="#">Check-in and seat selection</a></li>
+                            <li><a href="#">Refund and rescheduling</a></li>
+                            <li><a href="#">Reimbursement vouchers</a></li>
+                            <li><a href="guideAirfare.html">Airport Guide</a></li>
+                            <li><a href="customizedAirfare.html" class="flight1">Customized charter flights</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="train">
+                        <a href="#">
+                            <i class="fa-solid fa-train"></i>
+                            <span class="text">Train tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Domestic train tickets</a></li>
+                            <li><a href="#">International/Hong Kong,Macao and Taiwan</a></li>
+                        </ul>
+                        <div class="hover-description">Train tickets</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="travels">
+                        <a href="#">
+                            <i class="fa-solid fa-flag"></i>
+                            <span class="text">Travel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Tourism Homepage</a></li>
+                            <li><a href="#">Group tour</a></li>
+                            <li><a href="#">Private tour</a></li>
+                            <li><a href="#">Independent travel</a></li>
+                            <li><a href="#">Cruise ship</a></li>
+                            <li><a href="#">Day trip</a></li>
+                            <li><a href="#">Customized travel</a></li>
+                            <li><a href="#">Local tours</a></li>
+                            <li><a href="#">High-end travel</a></li>
+                            <li><a href="#">Theme Tour</a></li>
+                            <li><a href="#">Study Abroad</a></li>
+                            <li><a href="#">Visa</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Coporate MICE</a></li>
+                            <li><a href="#">Destination</a></li>
+                        </ul>
+                        <div class="hover-description">Travel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="tickets">
+                        <a href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span class="text">Tickets & Events</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Sub-menu Item X</a></li>
+                            <li><a href="#">Sub-menu Item Y</a></li>
+                        </ul>
+                        <div class="hover-description">Tickets & Events</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="Bus&Boat">
+                        <a href="#">
+                            <i class="fa-solid fa-bus"></i>
+                            <span class="text">Bus and boat tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="busTicket.html">Bus ticket</a></li>
+                            <li><a href="boatTicket.html">Boat ticket</a></li>
+                        </ul>
+                        <div class="hover-description">Bus and boat tickets</div>
+                    </li>
+
+                    <li class="menu-item " data-menu="Car">
+                        <a href="#">
+                            <i class="fa-solid fa-car"></i>
+                            <span class="text">Car</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticCarRental.html">Domestic car rental</a></li>
+                            <li><a href="overseaCaarRental.html">Overseas car rental</a></li>
+                            <li><a href="airportpickup.html">Airport pick-up and drop-off station</a></li>
+                            <li><a href="dailyCarRental.html">Daily car rental</a></li>
+                        </ul>
+                        <div class="hover-description">Car</div>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-content">
+
+                    <div class="logo-section">
+                        <img class="logo" src="img/kimberley.jpg">
+                        <span class="website-name">Kimberley</span>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for anything related to travel">
+                        <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="#">Log in</a><span>|</span>
+                        <a href="#">Register</a><span>|</span>
+
+                        <div class="dropdown-container" id="myOrdersDropdown">
+                            <a href="#" class="dropdown-toggle">My Orders <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu order-dropdown-menu">
+                                <a href="#"><i class="fa-solid fa-plane"></i> Flight tickets and related orders</a>
+                                <a href="#"><i class="fa-solid fa-hotel"></i> Hotel bookings</a>
+                                <a href="#"><i class="fa-solid fa-map-location-dot"></i> Travel orders</a>
+                                <a href="#"><i class="fa-solid fa-train"></i> Train ticket orders</a>
+                                <a href="#"><i class="fa-solid fa-list-ul"></i> All orders</a>
+                                <hr>
+                                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i> Check orders via phone</a>
+                            </div>
+                        </div>
+
+                        <span>|</span>
+
+                        <div class="dropdown-container" id="contactCustomerServiceDropdown">
+                            <a href="#" class="dropdown-toggle">Contact customer service <i
+                                    class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu contact-dropdown-menu">
+                                <a href="#" class="customer-center">Visit Customer Center ></a>
+                                <hr>
+                                <p>Domestic: 95010 / 400-830-6666</p>
+                                <p>HK: +852-3008-3295</p>
+                                <p>Macao: +86-21 3406-4888</p>
+                                <p>Taiwan: +86-21 3406-4888</p>
+                                <p>Other regions: +86-21 3406-4888</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="icon-link"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-heart"></i></a>
+                        <div class="theme-toggle" id="theme-toggle">
+                            <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                            <label for="theme-switch" class="theme-switch-label">
+                                <span class="theme-switch-inner"></span>
+                                <span class="theme-switch-slider"></span>
+                            </label>
+                        </div>
+
+                    </nav>
+                </div>
+            </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- hero -->
+             <div class="hero-section">
+    <video autoplay muted loop class="background-video-placeholder" autoplay>
+        <source src="https://video.c-ctrip.com/videos/AS0o1m000001hwpcvD840.mp4" type="video/mp4">
+        <source src="charter_flight_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+        <h1 class="main-title big-font">Ctrip Customized Charter Flights</h1>
+        <h2 class="sub-title medium-font">Take each step with ease</h2>
+        </div>
+
+   <!----><div class="customer-service-container">
+    <div class="customer-service-button">
+        <img id="avatarImg" src="img/kimberley.jpg" alt="Avatar" class="service-avatar editable-img">
+        <span class="button-text editable-text">Customer service inquiry</span>
+
+        <!-- Avatar Upload (Admin Mode Only) -->
+        <label class="upload-icon avatar-upload-icon">
+            <i class="fa fa-camera"></i>
+            <input type="file" id="avatarUpload" accept="image/*">
+        </label>
+    </div>
+
+   
+
+<!-- ADMIN EDIT BUTTON -->
+<div class="customer-service-popup">
+    <div class="popup-header">
+        <span class="vip-line-label">VIP line</span>
+        <span class="vip-phone-number">400-621-5588</span>
+        <button class="edit-cs-btn"><i class="fa fa-pen"></i></button>
+    </div>
+
+    <div class="qr-box">
+        <div class="qr-wrapper">
+            <img src="img/qr.png" id="qrImg" class="qr-img">
+            <div class="camera-overlay" id="qrCamera"><i class="fas fa-camera"></i></div>
+            <input type="file" accept="image/*" id="qrUpload" hidden>
+        </div>
+        <p class="qr-caption">Scan QR to contact customer service</p>
+    </div>
+</div>
+
+
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+<!-- form -->
+ <div class="charter-booking-section">
+    <div class="booking-tabs">
+        <button class="tab-button active" data-tab="one-way">One Way</button>
+        <button class="tab-button" data-tab="round-trip">Round trip</button>
+        <button class="tab-button" data-tab="multi-distance">Multi-distance</button>
+    </div>
+
+    <div class="booking-form-container">
+
+        <form id="bookingForm" class="tab-content active" data-tab-content="one-way">
+            <div class="trip-row one-way-row" data-row-id="1">
+                <div class="input-field">
+                    <label>Departure point</label>
+                    <input type="text" placeholder="Departure point" data-input-type="departure">
+                </div>
+                <div class="input-swap">⇌</div>
+                <div class="input-field">
+                    <label>destination</label>
+                    <input type="text" placeholder="Destination" data-input-type="destination">
+                </div>
+                <div class="input-field date-input-field">
+                    <label>Departure Date</label>
+                    <input type="text" placeholder="Departure Date" readonly class="date-picker-input" data-input-type="date">
+                    <!-- <div class="calendar-placeholder">
+                        <p>2025 November</p>
+                        <div class="calendar-grid">
+                            <p>11</p><p>12</p><p>13</p><p>14</p><p class="now">15</p>
+                            </div>
+                    </div> -->
+                </div>
+                <div class="input-field travelers-field">
+                    <label>Number of travelers</label>
+                    <input type="number" value="1" min="1" data-input-type="travelers">
+                </div>
+                <button type="submit" class="submit-button gold-button">Free charter flight booking</button>
+            </div>
+        </form>
+
+        <form class="tab-content" data-tab-content="round-trip">
+            <div class="trip-row round-trip-row" data-row-id="1">
+                <div class="input-field">
+                    <label>Departure point</label>
+                    <input type="text" placeholder="Departure point">
+                </div>
+                <div class="input-swap">⇌</div>
+                <div class="input-field">
+                    <label>destination</label>
+                    <input type="text" placeholder="Destination">
+                </div>
+                <div class="input-field date-input-field">
+                    <label>Departure Date</label>
+                    <input type="text" placeholder="Departure Date" readonly class="date-picker-input">
+                </div>
+                <div class="input-field date-input-field">
+                    <label>Back to date</label>
+                    <input type="text" placeholder="Return Date" readonly class="date-picker-input">
+                </div>
+                <div class="input-field travelers-field">
+                    <label>Number of travelers</label>
+                    <input type="number" value="1" min="1">
+                </div>
+                <button type="submit" class="submit-button gold-button ">Free charter flight booking</button>
+            </div>
+            <!-- full-width -->
+        </form>
+
+        <form class="tab-content" data-tab-content="multi-distance">
+            <div class="trip-row multi-distance-row" data-row-id="1">
+                <div class="input-field">
+                    <label>Departure</label>
+                    <input type="text" placeholder="Departure point">
+                </div>
+                <div class="input-swap">⇌</div>
+                <div class="input-field">
+                    <label>destination</label>
+                    <input type="text" placeholder="Destination">
+                </div>
+                <div class="input-field date-input-field">
+                    <label>Departure date</label>
+                    <input type="text" placeholder="Departure Date" readonly class="date-picker-input">
+                </div>
+                <button type="button" class="remove-trip-button hidden" aria-label="Remove trip row">×</button>
+            </div>
+
+            <div class="trip-row multi-distance-row" data-row-id="2">
+                <div class="input-field">
+                    <label>Departure</label>
+                    <input type="text" placeholder="Departure point">
+                </div>
+                <div class="input-swap">⇌</div>
+                <div class="input-field">
+                    <label>destination</label>
+                    <input type="text" placeholder="Destination">
+                </div>
+                <div class="input-field date-input-field">
+                    <label>Departure date</label>
+                    <input type="text" placeholder="Departure Date" readonly class="date-picker-input">
+                </div>
+                <button type="button" class="remove-trip-button" aria-label="Remove trip row">×</button>
+            </div>
+
+            <div class="multi-distance-footer">
+                <button type="button" class="add-trip-button">
+                    + Add another trip
+                </button>
+                
+                <div class="travelers-submit-group">
+                    <div class="input-field travelers-field">
+                        <label>Number of travelers</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <button type="submit" class="submit-button gold-button">Book a charter free of charge</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- special today -->
+ <div class="special-section">
+    <h2 class="section-title">Special offer charter flights</h2>
+    <p class="section-subtitle">Today's Special Offer</p>
+
+    <div class="header-image-box">
+        <img src="img/flightbanner.jpg" alt="Selected daily deals background" class="header-image">
+        
+        <div class="header-text-overlay">
+            <h3 class="overlay-title">Selected Daily Deals</h3>
+            <!-- <p class="overlay-subtitle" >Group buying discounts hit the lowest price</p> -->
+        </div>
+    </div>
+
+    <div class="deals-carousel-wrapper">
+        <button class="nav-button1 prev-deal-button" aria-label="Previous deals" disabled></button>
+        
+        <div class="deals-container">
+            <div class="deal-card-set page-1">
+                <div class="deal-card">
+                    <div class="edit-card-btn"><i class="fas fa-edit"></i></div>
+
+                    <p class="route">Sapporo — Shanghai</p>
+                    <p class="date">Wednesday, December 26, 2025</p>
+                    <p class="market-price">Market price: ¥600,000</p>
+                    <p class="aircraft">Gulfstream G550 · 16 seats</p>
+                    <p class="offer-price">¥300,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Sapporo — Shanghai</p>
+                    <p class="date">Thursday, December 26, 2025</p>
+                    <p class="market-price">Market price: ¥600,000</p>
+                    <p class="aircraft">Gulfstream G550 · 16 seats</p>
+                    <p class="offer-price">¥300,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Beijing — Shenzhen</p>
+                    <p class="date">Thursday, November 6, 2025</p>
+                    <p class="market-price">Market price: ¥250,000</p>
+                    <p class="aircraft">Gulfstream G550 · 15 seats</p>
+                    <p class="offer-price">¥150,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Beijing — Guangzhou</p>
+                    <p class="date">Thursday, November 6, 2025</p>
+                    <p class="market-price">Market price: ¥250,000</p>
+                    <p class="aircraft">Gulfstream G550 · 15 seats</p>
+                    <p class="offer-price">¥150,000</p>
+                </div>
+                
+                <div class="deal-card">
+                    <p class="route">Shanghai — Beijing</p>
+                    <p class="date">Thursday, November 6, 2025</p>
+                    <p class="market-price">Market price: ¥250,000</p>
+                    <p class="aircraft">Cessna Citation 560XL · 8 seats</p>
+                    <p class="offer-price">¥118,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Shanghai — Shijiazhuang</p>
+                    <p class="date">Thursday, November 6, 2025</p>
+                    <p class="market-price">Market price: ¥280,000</p>
+                    <p class="aircraft">Cessna Citation 560XL · 8 seats</p>
+                    <p class="offer-price">¥168,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Shanghai — Dalian</p>
+                    <p class="date">Thursday, November 6, 2025</p>
+                    <p class="market-price">Market price: ¥280,000</p>
+                    <p class="aircraft">Cessna Citation 560XL · 8 seats</p>
+                    <p class="offer-price">¥188,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Chengdu — Beijing</p>
+                    <p class="date">Friday, November 7, 2025</p>
+                    <p class="market-price">Market price: ¥350,000</p>
+                    <p class="aircraft">Gulfstream G550 · 15 seats</p>
+                    <p class="offer-price">¥130,000</p>
+                </div>
+            </div>
+
+            <div class="deal-card-set page-2">
+                <div class="deal-card">
+                    <p class="route">Shanghai — Tokyo</p>
+                    <p class="date">Saturday, November 8, 2025</p>
+                    <p class="market-price">Market price: ¥380,000</p>
+                    <p class="aircraft">Global Express · 14 seats</p>
+                    <p class="offer-price">¥220,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Beijing — Sanya</p>
+                    <p class="date">Sunday, November 9, 2025</p>
+                    <p class="market-price">Market price: ¥400,000</p>
+                    <p class="aircraft">Falcon 7X · 12 seats</p>
+                    <p class="offer-price">¥250,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Guangzhou — Hong Kong</p>
+                    <p class="date">Monday, November 10, 2025</p>
+                    <p class="market-price">Market price: ¥180,000</p>
+                    <p class="aircraft">Learjet 60XR · 7 seats</p>
+                    <p class="offer-price">¥98,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Shenzhen — Singapore</p>
+                    <p class="date">Tuesday, November 11, 2025</p>
+                    <p class="market-price">Market price: ¥550,000</p>
+                    <p class="aircraft">Challenger 350 · 9 seats</p>
+                    <p class="offer-price">¥350,000</p>
+                </div>
+                
+                <div class="deal-card">
+                    <p class="route">Dalian — Shanghai</p>
+                    <p class="date">Wednesday, November 12, 2025</p>
+                    <p class="market-price">Market price: ¥220,000</p>
+                    <p class="aircraft">Cessna XLS+ · 8 seats</p>
+                    <p class="offer-price">¥125,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Xi'an — Chengdu</p>
+                    <p class="date">Thursday, November 13, 2025</p>
+                    <p class="market-price">Market price: ¥190,000</p>
+                    <p class="aircraft">Hawker 800XP · 8 seats</p>
+                    <p class="offer-price">¥95,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Kunming — Beijing</p>
+                    <p class="date">Friday, November 14, 2025</p>
+                    <p class="market-price">Market price: ¥320,000</p>
+                    <p class="aircraft">Gulfstream IV-SP · 14 seats</p>
+                    <p class="offer-price">¥190,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Qingdao — Shenzhen</p>
+                    <p class="date">Saturday, November 15, 2025</p>
+                    <p class="market-price">Market price: ¥260,000</p>
+                    <p class="aircraft">Legacy 500 · 8 seats</p>
+                    <p class="offer-price">¥145,000</p>
+                </div>
+            </div>
+
+            <div class="deal-card-set page-3">
+                <div class="deal-card">
+                    <p class="route">Haikou — Macau</p>
+                    <p class="date">Sunday, November 16, 2025</p>
+                    <p class="market-price">Market price: ¥170,000</p>
+                    <p class="aircraft">Challenger 605 · 10 seats</p>
+                    <p class="offer-price">¥85,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Wuhan — Shanghai</p>
+                    <p class="date">Monday, November 17, 2025</p>
+                    <p class="market-price">Market price: ¥210,000</p>
+                    <p class="aircraft">Global 5000 · 12 seats</p>
+                    <p class="offer-price">¥110,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Chongqing — Shenzhen</p>
+                    <p class="date">Tuesday, November 18, 2025</p>
+                    <p class="market-price">Market price: ¥240,000</p>
+                    <p class="aircraft">Legacy 600 · 13 seats</p>
+                    <p class="offer-price">¥135,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Hangzhou — Beijing</p>
+                    <p class="date">Wednesday, November 19, 2025</p>
+                    <p class="market-price">Market price: ¥290,000</p>
+                    <p class="aircraft">Gulfstream G650 · 18 seats</p>
+                    <p class="offer-price">¥170,000</p>
+                </div>
+                
+                <div class="deal-card">
+                    <p class="route">Beijing — Paris</p>
+                    <p class="date">Thursday, November 20, 2025</p>
+                    <p class="market-price">Market price: ¥1,500,000</p>
+                    <p class="aircraft">Bombardier Global 7500 · 19 seats</p>
+                    <p class="offer-price">¥800,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Shanghai — London</p>
+                    <p class="date">Friday, November 21, 2025</p>
+                    <p class="market-price">Market price: ¥1,400,000</p>
+                    <p class="aircraft">Gulfstream G650ER · 17 seats</p>
+                    <p class="offer-price">¥750,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Shenzhen — Dubai</p>
+                    <p class="date">Saturday, November 22, 2025</p>
+                    <p class="market-price">Market price: ¥800,000</p>
+                    <p class="aircraft">Falcon 8X · 16 seats</p>
+                    <p class="offer-price">¥420,000</p>
+                </div>
+                <div class="deal-card">
+                    <p class="route">Guangzhou — Sydney</p>
+                    <p class="date">Sunday, November 23, 2025</p>
+                    <p class="market-price">Market price: ¥950,000</p>
+                    <p class="aircraft">Global Express XRS · 15 seats</p>
+                    <p class="offer-price">¥480,000</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <button class="nav-button1 next-deal-button" aria-label="Next deals"></button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- advantages -->
+<div class="advantages-section">
+    <h2 class="section-title">kimberley charter flight advantages</h2>
+
+    <div class="advantage-carousel-wrapper">
+        <button class="nav-button nav-button1 prev-advantage-button" aria-label="Previous advantages"></button>
+        
+        <div class="advantage-cards-container">
+            
+            <div class="advantage-card" data-index="0">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="Dedicated terminal" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">Flight butler full service</h4>
+                        <p class="overlay-text editable-text">
+                          Kimberley's customized charter flight adopts a 7*24 hour working system, no matter where you are, you can get in touch with our flight butler.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">Dedicated terminal and security check</p>
+                    <p class="advantage-detail editable-text">No need to queue, quick and private</p>
+                </div>
+            </div>
+
+            <div class="advantage-card" data-index="1">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="Decide flight time" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">Autonomously decide flight time</h4>
+                        <p class="overlay-text editable-text">
+                            Charter flights allow clients to choose their preferred departure time and route, providing maximum flexibility and convenience tailored to their busy schedules.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">Autonomously decide flight time</p>
+                    <p class="advantage-detail editable-text">Flexible departure time configuration</p>
+                </div>
+            </div>
+
+            <div class="advantage-card" data-index="2">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="Customizable services" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">Customizable services available on board</h4>
+                        <p class="overlay-text editable-text">
+                            Enjoy tailor-made services including private catering, specific cabin configurations, and personalized entertainment systems to ensure a journey that meets your exact requirements.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">Customizable services available on board</p>
+                    <p class="advantage-detail editable-text">Exclusive meals, entertainment, and seating arrangements</p>
+                </div>
+            </div>
+
+            <div class="advantage-card" data-index="3">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="World selection" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">Selecting world's top quality aircraft</h4>
+                        <p class="overlay-text editable-text">
+                            We select aircraft from the world's leading fleets, ensuring the highest standards of safety, comfort, and luxury for every customized charter flight.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">Selecting the world's</p>
+                    <p class="advantage-detail editable-text">Top quality guarantee</p>
+                </div>
+            </div>
+            
+            <div class="advantage-card next-faint" data-index="4">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="Safety Guarantee" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">Safety Guarantee</h4>
+                        <p class="overlay-text editable-text">
+                            All our charter flights adhere to strict international safety protocols and are operated by experienced crews and certified aircraft.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">Safety and Security</p>
+                    <p class="advantage-detail editable-text">Strict global standards</p>
+                </div>
+            </div>
+
+            <div class="advantage-card" data-index="5">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="Global Network" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">Global Network</h4>
+                        <p class="overlay-text editable-text">
+                            Our extensive network ensures we can arrange charter flights to virtually any destination worldwide with efficient routing.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">Extensive Global Reach</p>
+                    <p class="advantage-detail editable-text">Fly anywhere with ease</p>
+                </div>
+            </div>
+
+            <div class="advantage-card" data-index="6">
+                <div class="edit-card-btn">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="image-box">
+                    <img src="img/airIN.jpg" alt="24hr Support" class="advantage-image editable-img">
+                    <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                    
+                    <div class="detail-overlay">
+                        <h4 class="overlay-title editable-text">24/7 Dedicated Support</h4>
+                        <p class="overlay-text editable-text">
+                            Our flight butlers and support team are available 24 hours a day, 7 days a week, to assist with any last-minute changes or requirements.
+                        </p>
+                    </div>
+                </div>
+                <div class="caption-box">
+                    <p class="advantage-name editable-text">24/7 Dedicated Support</p>
+                    <p class="advantage-detail editable-text">Always there for you</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <button class="nav-button nav-button1 next-advantage-button" aria-label="Next advantages"></button>
+    </div>
+</div>
+
+
+
+<!-- helicopter -->
+
+<div class="model-section">
+    <h2 class="section-title">Models can be customized</h2>
+
+    <div class="model-cards-container">
+        
+        <div class="model-card" data-card-key="model_card_0">
+            <div class="edit-card-btn">
+                <i class="fas fa-edit"></i>
+            </div>
+            <div class="image-box">
+                <img src="img/jet.jpg" alt="Business jet" class="model-image editable-img">
+                <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                
+                <div class="detail-overlay">
+                    <p class="overlay-text editable-text">
+                        Business jets are mainly used for long-haul business trips, personal travel, and long-haul transportation of important materials. They can provide high-end, comfortable and safe flying experience.
+                    </p>
+                </div>
+            </div>
+            <div class="caption-box">
+                <p class="model-name editable-text">Business jet</p>
+                <p class="model-seats editable-text">Seats 1-30</p>
+            </div>
+        </div>
+
+        <div class="model-card" data-card-key="model_card_1">
+            <div class="edit-card-btn">
+                <i class="fas fa-edit"></i>
+            </div>
+            <div class="image-box">
+                <img src="img/helicopter.jpg" alt="Helicopter" class="model-image editable-img">
+                <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                
+                <div class="detail-overlay">
+                    <p class="overlay-text editable-text">
+                         Using helicopter ferries in big cities can avoid congestion and greatly save time and costs; sightseeing at high altitudes at the attraction will give passengers an unparalleled riding experience.
+                    </p>
+                </div>
+            </div>
+            <div class="caption-box">
+                <p class="model-name editable-text">helicopter</p>
+                <p class="model-seats editable-text">Seats 1-12</p>
+            </div>
+        </div>
+
+        <div class="model-card" data-card-key="model_card_2">
+            <div class="edit-card-btn">
+                <i class="fas fa-edit"></i>
+            </div>
+            <div class="image-box">
+                <img src="img/airliner.jpg" alt="Large passenger aircraft" class="model-image editable-img">
+                <input type="file" class="image-upload" accept="image/*" style="display: none;">
+                
+                <div class="detail-overlay">
+                    <p class="overlay-text editable-text">
+                        Large passenger aircraft are suitable for group travel, tourism charters, and large-scale material transportation. They offer comprehensive services, ample space, and stability for long-distance flights.
+                    </p>
+                </div>
+            </div>
+            <div class="caption-box">
+                <p class="model-name editable-text">large passenger aircraft</p>
+                <p class="model-seats editable-text">30 seats or more</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- banner -->
+
+           <div class="charter-banner-section">
+    <div class="charter-banner-area">
+        <div class="banner-background-placeholder" style="background-image: url('charter_service_banner_bg.png');">
+            
+            <div class="banner-content">
+                <div class="tripcom-logo-placeholder">
+                    <img src="img/customizedbanner.jpg" alt="Trip.com Group Charter Service Logo" class="charter-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="charter-info-footer">
+        <div class="charter-vip-line">
+            <span class="phone-icon" role="img" aria-label="Phone icon">📞</span>
+            <div class="phone-details">
+                <p class="vip-label">Charter VIP Line</p>
+                <p class="vip-number">400-621-5588</p>
+            </div>
+        </div>
+
+        <div class="nbaa-member-logo">
+            <span class="member-label">member of</span>
+            <div class="logo-placeholder" style="background-image: url(img/airIN.jpg);">
+                </div>
+        </div>
+
+        <div class="qr-codes-section">
+            <div class="qr-item">
+                <div class="qr-placeholder" style="background-image: url(img/qr.png);">
+                    </div>
+                <div class="qr-text">
+                    <p class="qr-title">Mobile phone QR code reservation</p>
+                    <p class="qr-description">More efficient and faster</p>
+                </div>
+            </div>
+
+            <!-- <div class="qr-item">
+                <div class="qr-placeholder" style="background-image: url('qr_charter_flights.png');">
+                    </div>
+                <div class="qr-text">
+                    <p class="qr-title">Ctrip Customized Charter Flights</p>
+                    <p class="qr-description">More efficient and faster</p>
+                </div>
+            </div> -->
+
+            <div class="qr-item">
+                <div class="qr-placeholder" style="background-image: url(img/qr.png);">
+                    </div>
+                <div class="qr-text">
+                    <p class="qr-title">WeChat Official Account</p>
+                    <p class="qr-description">Follow Kimberley's customized charter</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+            
+
+            <footer class="main-ctrip-footer">
+                <div class="footer-content-wrapper">
+
+                    <div class="footer-column travel-info">
+                        <h4 class="column-title">Travel Information</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">Hotel Index</a>
+                            <a href="#" class="footer-link">Strategy Index</a>
+                            <a href="#" class="footer-link">Flight Index</a>
+                            <a href="#" class="footer-link">Site Navigation</a>
+                            <a href="#" class="footer-link">Travel Index</a>
+                            <a href="#" class="footer-link">Cruise Index</a>
+                            <a href="#" class="footer-link">Corporate Travel Index</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column franchise-cooperation">
+                        <h4 class="column-title">Franchise cooperation</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">Distribution Alliance</a>
+                            <a href="#" class="footer-link">Friendly Links</a>
+                            <a href="#" class="footer-link">Insurance Agency Cooperation</a>
+                            <a href="#" class="footer-link">Gift card</a>
+                            <a href="#" class="footer-link">Hotel Franchise</a>
+                            <a href="#" class="footer-link">Destination</a>
+                            <a href="#" class="footer-link">More franchise opportunities</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column about-ctrip">
+                        <h4 class="column-title">About Ctrip</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">About Ctrip</a>
+                            <a href="#" class="footer-link">Ctrip Hot Topics</a>
+                            <a href="#" class="footer-link">Contact Us</a>
+                            <!-- <a href="#" class="footer-link">We are looking to recruit talented individuals.</a> -->
+                            <a href="#" class="footer-link">User Agreement</a>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">Business License</a>
+                            <a href="#" class="footer-link">Security Center</a>
+                            <a href="#" class="footer-link">Ctrip Content Center</a>
+                            <a href="#" class="footer-link">Intellectual property</a>
+                            <a href="#" class="footer-link">Trip.com Group</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column contact-qr-area">
+                        <div class="contact-info">
+                            <p class="contact-header">Within the territory: <span class="phone-number">88010</span></p>
+                            <p class="contact-header">Or <span class="phone-number">400-830-6666</span></p>
+                            <p>Hong Kong, China: <span class="phone-number">+852-3008-3205</span></p>
+                            <p>Macau, China: <span class="phone-number">+86-21 3406-4888</span></p>
+                            <p>Taiwan, China: <span class="phone-number">+86-21 3406-4888</span></p>
+                            <p>Other countries and regions: <span class="phone-number">+86-21-3406-4888</span></p>
+                        </div>
+
+                        <div class="qr-download-box">
+                            <div class="qr-placeholder" style="background-image: url('img/qr.png');">
+                            </div>
+                            <p class="qr-caption">Scan the QR code to download the Ctrip App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-section">
+                    <hr class="bottom-divider">
+                    <p class="copyright-info">
+                        Copyright © 1999-2025, ctrip.com. All rights reserved. | ICP License: 京ICP备0500130 | <a href="#"
+                            class="info-link">京ICP证030029号</a>-3 | <a href="#"
+                            class="info-link">闽ICP备0101051117491004200015号</a>
+                    </p>
+
+                    <p class="authority-info">
+                        <span class="authority-icon">🔴</span> <a href="#" class="info-link">Shanghai Public Security
+                            Bureau Registration No. 31010502002731</a> | <a href="#" class="info-link">Internet Drug
+                            Information Service Qualification Certificate</a> | <a href="#" class="info-link">
+                            (Shanghai) Online Medical Device Platform Registration No. (2022) 00031</a> | <a href="#"
+                            class="info-link">Shanghai Online Food Registration No. 0000011</a> | <a href="#"
+                            class="info-link"> Tourism and Vacation Qualification</a> | <a href="#"
+                            class="info-link">Platform Information</a>
+                    </p>
+
+                    <p class="report-info">
+                        Report hotline for illegal and harmful information: <span class="hotline">021-22230045</span> |
+                        National tourism complaint hotline: <span class="hotline">12345</span> | <a href="#"
+                            class="info-link commitment-link">Shanghai tourism website's commitment to fulfilling its
+                            main responsibility for integrity building</a>
+                    </p>
+
+                    <div class="certificate-logos" style="margin-left: 20%;">
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                        <div class="logo-placeholder" style="background-image: url('img/airLogo.png');"></div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+  
+    <script src="script.js"></script>
+    <script src="customizedAirfareScript.js"></script>
+
+</body>
+
+</html>

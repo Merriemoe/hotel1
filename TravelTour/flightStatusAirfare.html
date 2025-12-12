@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimberley Travel & Tour | Flights - Status</title>
+    <link rel="icon" type="image/png" href="img/kimberley.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flightStatusAirfareStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar collapsed" id="sidebar">
+
+            <!-- Hamburger inside sidebar -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul>
+                    <li class="menu-item " data-menu="hotel">
+                        <a href="#">
+                            <i class="fa-solid fa-hotel"></i>
+                            <span class="text">Hotel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Domestic hotels</a></li>
+                            <li><a href="#">Overseas Hotels</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item active" data-menu="flight">
+                        <a href="#">
+                            <i class="fa-solid fa-plane"></i>
+                            <span class="text">Airfare</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticAirfare.html">Domestic/International,Hong Kong,Macao
+                                    andTaiwan</a></li>
+                            <li><a href="mapAirfare.html">Discounted airfares</a></li>
+                            <li><a href="flightStatusAirfare.html" class="flight1">Flight status</a></li>
+                            <li><a href="#">Check-in and seat selection</a></li>
+                            <li><a href="#">Refund and rescheduling</a></li>
+                            <li><a href="#">Reimbursement vouchers</a></li>
+                            <li><a href="guideAirfare.html">Airport Guide</a></li>
+                            <li><a href="customizedAirfare.html">Customized charter flights</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="train">
+                        <a href="#">
+                            <i class="fa-solid fa-train"></i>
+                            <span class="text">Train tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Domestic train tickets</a></li>
+                            <li><a href="#">International/Hong Kong,Macao and Taiwan</a></li>
+                        </ul>
+                        <div class="hover-description">Train tickets</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="travels">
+                        <a href="#">
+                            <i class="fa-solid fa-flag"></i>
+                            <span class="text">Travel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Tourism Homepage</a></li>
+                            <li><a href="#">Group tour</a></li>
+                            <li><a href="#">Private tour</a></li>
+                            <li><a href="#">Independent travel</a></li>
+                            <li><a href="#">Cruise ship</a></li>
+                            <li><a href="#">Day trip</a></li>
+                            <li><a href="#">Customized travel</a></li>
+                            <li><a href="#">Local tours</a></li>
+                            <li><a href="#">High-end travel</a></li>
+                            <li><a href="#">Theme Tour</a></li>
+                            <li><a href="#">Study Abroad</a></li>
+                            <li><a href="#">Visa</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Coporate MICE</a></li>
+                            <li><a href="#">Destination</a></li>
+                        </ul>
+                        <div class="hover-description">Travel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="tickets">
+                        <a href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span class="text">Tickets & Events</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Sub-menu Item X</a></li>
+                            <li><a href="#">Sub-menu Item Y</a></li>
+                        </ul>
+                        <div class="hover-description">Tickets & Events</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="Bus&Boat">
+                        <a href="#">
+                            <i class="fa-solid fa-bus"></i>
+                            <span class="text">Bus and boat tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="busTicket.html">Bus ticket</a></li>
+                            <li><a href="boatTicket.html">Boat ticket</a></li>
+                        </ul>
+                        <div class="hover-description">Bus and boat tickets</div>
+                    </li>
+
+                    <li class="menu-item " data-menu="Car">
+                        <a href="#">
+                            <i class="fa-solid fa-car"></i>
+                            <span class="text">Car</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticCarRental.html">Domestic car rental</a></li>
+                            <li><a href="overseaCaarRental.html">Overseas car rental</a></li>
+                            <li><a href="airportpickup.html">Airport pick-up and drop-off station</a></li>
+                            <li><a href="dailyCarRental.html">Daily car rental</a></li>
+                        </ul>
+                        <div class="hover-description">Car</div>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-content">
+
+                    <div class="logo-section">
+                        <img class="logo" src="img/kimberley.jpg">
+                        <span class="website-name">Kimberley</span>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for anything related to travel">
+                        <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="#">Log in</a><span>|</span>
+                        <a href="#">Register</a><span>|</span>
+
+                        <div class="dropdown-container" id="myOrdersDropdown">
+                            <a href="#" class="dropdown-toggle">My Orders <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu order-dropdown-menu">
+                                <a href="#"><i class="fa-solid fa-plane"></i> Flight tickets and related orders</a>
+                                <a href="#"><i class="fa-solid fa-hotel"></i> Hotel bookings</a>
+                                <a href="#"><i class="fa-solid fa-map-location-dot"></i> Travel orders</a>
+                                <a href="#"><i class="fa-solid fa-train"></i> Train ticket orders</a>
+                                <a href="#"><i class="fa-solid fa-list-ul"></i> All orders</a>
+                                <hr>
+                                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i> Check orders via phone</a>
+                            </div>
+                        </div>
+
+                        <span>|</span>
+
+                        <div class="dropdown-container" id="contactCustomerServiceDropdown">
+                            <a href="#" class="dropdown-toggle">Contact customer service <i
+                                    class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu contact-dropdown-menu">
+                                <a href="#" class="customer-center">Visit Customer Center ></a>
+                                <hr>
+                                <p>Domestic: 95010 / 400-830-6666</p>
+                                <p>HK: +852-3008-3295</p>
+                                <p>Macao: +86-21 3406-4888</p>
+                                <p>Taiwan: +86-21 3406-4888</p>
+                                <p>Other regions: +86-21 3406-4888</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="icon-link"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-heart"></i></a>
+                        <div class="theme-toggle" id="theme-toggle">
+                            <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                            <label for="theme-switch" class="theme-switch-label">
+                                <span class="theme-switch-inner"></span>
+                                <span class="theme-switch-slider"></span>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+
+
+            <div class="heroImage">
+                <img src="img/flightbanner.jpg" alt="Ad Banner"
+                    style="width: 100%; border-radius: 4px; height: 240px;">
+            </div>
+
+
+
+
+
+            <div id="flight-booking-form-container">
+
+                <div class="tab-bar"">
+                    <div class="tab tab1" data-tab="domestic"><a style="color: white; text-decoration: none;"
+                            href="domesticAirfare.html">Domestic</a>
+                    </div>
+                    <div class="tab"><a href="#" style="color: white; text-decoration: none;">Special tickets</a>
+                    </div>
+                    <div class="tab active"><a style="color: #333; text-decoration: none;"
+                            href="flightStatusAirfare.html">Flight status</a></div>
+                    <div class="tab"><a  href="#" style="color: white; text-decoration: none;">Refund and change</a></div>
+                    <div class="tab tab6">Online seat selection</div>
+                </div>
+                <div class="trip-type-group">
+                    <label>
+                        <input type="radio" name="tripType" value="flightNumbers"> Search for flight numbers
+                    </label>
+                    <label>
+                        <input type="radio" name="tripType" value="landingSites" checked> Search for take-off and
+                        landing sites
+                    </label>
+
+
+                    <div class="form-group ftext"
+                        style="margin-left: auto; min-width: 250px; padding: 0 15px;margin-right: 20px; margin-top: -10px;margin-bottom: 4px; height: 42px;">
+                        <label for="cabin-class-select" style="position: absolute; top: 5px; left: 15px;">
+                            *For international flights, please check the local departure time of the departure
+                            city</label>
+                    </div>
+                </div>
+
+
+                <div class="form-controls">
+
+                    <!-- <div class="form-group" id="departure-group">
+                        <label for="departure-input">Departure point</label>
+                        <input type="text" class="input-display" id="departure-input" placeholder="Shanghai (SHA)"
+                            readonly>
+                    </div> -->
+
+                    <div class="form-group" id="destination-group">
+                        <!-- <label for="destination-input">Destination</label> -->
+                        <input type="text" class="input-display" id="destination-input"
+                            placeholder="Please fill in the flight number , eg. MU1234" readonly>
+                    </div>
+
+                    <div class="form-group date-group">
+                        <label for="departure-date">Departure Date</label>
+                        <input type="text" class="input-display flatpickr-input" id="departure-date"
+                            placeholder="2025-11-06 tomorrow" readonly>
+                    </div>
+
+                    <!-- <div class="form-group date-group" id="return-date-group">
+                        <label for="return-date">Return Date</label>
+                        <input type="text" class="input-display flatpickr-input" id="return-date"
+                            placeholder="2025-11-09 Sunday" readonly>
+                    </div>
+
+                    <div class="form-group" style="min-width: 180px;">
+                        <label>Passenger type</label>
+                        <div style="padding-top: 15px;">
+                            <label style="position: static; margin-right: 15px;">
+                                <input type="checkbox" name="passengerType" value="children"> With children
+                            </label>
+                            <label style="position: static;">
+                                <input type="checkbox" name="passengerType" value="baby"> With baby
+                            </label>
+                        </div>
+                    </div> -->
+
+                    <button class="search-button">Search</button>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="bodyImage">
+                <img src="img/new-bottom-picture.png" alt="Ad Banner"
+                    style="width: 1200px; height: auto; border-radius: 4px; height: 240px;">
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer class="main-ctrip-footer">
+                <div class="footer-content-wrapper">
+
+                    <div class="footer-column travel-info">
+                        <h4 class="column-title">Travel Information</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">Hotel Index</a>
+                            <a href="#" class="footer-link">Strategy Index</a>
+                            <a href="#" class="footer-link">Flight Index</a>
+                            <a href="#" class="footer-link">Site Navigation</a>
+                            <a href="#" class="footer-link">Travel Index</a>
+                            <a href="#" class="footer-link">Cruise Index</a>
+                            <a href="#" class="footer-link">Corporate Travel Index</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column franchise-cooperation">
+                        <h4 class="column-title">Franchise cooperation</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">Distribution Alliance</a>
+                            <a href="#" class="footer-link">Friendly Links</a>
+                            <a href="#" class="footer-link">Insurance Agency Cooperation</a>
+                            <a href="#" class="footer-link">Gift card</a>
+                            <a href="#" class="footer-link">Hotel Franchise</a>
+                            <a href="#" class="footer-link">Destination</a>
+                            <a href="#" class="footer-link">More franchise opportunities</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column about-ctrip">
+                        <h4 class="column-title">About Kimberley</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">About Kimberley</a>
+                            <a href="#" class="footer-link">Kimberley Hot Topics</a>
+                            <a href="#" class="footer-link">Contact Us</a>
+                            <!-- <a href="#" class="footer-link">We are looking to recruit talented individuals.</a> -->
+                            <a href="#" class="footer-link">User Agreement</a>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">Business License</a>
+                            <a href="#" class="footer-link">Security Center</a>
+                            <a href="#" class="footer-link">Kimberley Content Center</a>
+                            <a href="#" class="footer-link">Intellectual property</a>
+                            <a href="#" class="footer-link">Trip.com Group</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column contact-qr-area">
+                        <div class="contact-info">
+                            <p class="contact-header">Within the territory: <span class="phone-number">88010</span></p>
+                            <p class="contact-header">Or <span class="phone-number">400-830-6666</span></p>
+                            <p>Hong Kong, China: <span class="phone-number">+852-3008-3205</span></p>
+                            <p>Macau, China: <span class="phone-number">+86-21 3406-4888</span></p>
+                            <p>Taiwan, China: <span class="phone-number">+86-21 3406-4888</span></p>
+                            <p>Other countries and regions: <span class="phone-number">+86-21-3406-4888</span></p>
+                        </div>
+
+                        <div class="qr-download-box">
+                            <div class="qr-placeholder" style="background-image: url('img/qr.png');">
+                            </div>
+                            <p class="qr-caption">Scan the QR code to download the Kimberley App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-section">
+                    <hr class="bottom-divider">
+                    <p class="copyright-info">
+                        Copyright © 1999-2025, kimberley.com. All rights reserved. | ICP License: 京ICP备0500130 | <a href="#"
+                            class="info-link">京ICP证030029号</a>-3 | <a href="#"
+                            class="info-link">闽ICP备0101051117491004200015号</a>
+                    </p>
+
+                    <p class="authority-info">
+                        <span class="authority-icon">🔴</span> <a href="#" class="info-link">Shanghai Public Security
+                            Bureau Registration No. 31010502002731</a> | <a href="#" class="info-link">Internet Drug
+                            Information Service Qualification Certificate</a> | <a href="#" class="info-link">
+                            (Shanghai) Online Medical Device Platform Registration No. (2022) 00031</a> | <a href="#"
+                            class="info-link">Shanghai Online Food Registration No. 0000011</a> | <a href="#"
+                            class="info-link"> Tourism and Vacation Qualification</a> | <a href="#"
+                            class="info-link">Platform Information</a>
+                    </p>
+
+                    <p class="report-info">
+                        Report hotline for illegal and harmful information: <span class="hotline">021-22230045</span> |
+                        National tourism complaint hotline: <span class="hotline">12345</span> | <a href="#"
+                            class="info-link commitment-link">Shanghai tourism website's commitment to fulfilling its
+                            main responsibility for integrity building</a>
+                    </p>
+
+                    <div class="certificate-logos" style="margin-left: 20%;">
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="flightStatusAirfareScript.js"></script>
+
+</body>
+
+</html>

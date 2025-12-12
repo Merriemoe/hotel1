@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimberley Travel & Tour | Flights - Status</title>
+    <link rel="icon" type="image/png" href="img/kimberley.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Domestichotelstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-theme="light" data-color="orange">
+<div class="container">
+<div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar collapsed" id="sidebar">
+
+            <!-- Hamburger inside sidebar -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul>
+                    <li class="menu-item " data-menu="hotel">
+                        <a href="#">
+                            <i class="fa-solid fa-hotel"></i>
+                            <span class="text">Hotel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="Domestichotel.html">Domestic hotels</a></li>
+                            <li><a href="#">Overseas Hotels</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item active" data-menu="flight">
+                        <a href="#">
+                            <i class="fa-solid fa-plane"></i>
+                            <span class="text">Airfare</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticAirfare.html">Domestic/International,Hong Kong,Macao
+                                    andTaiwan</a></li>
+                            <li><a href="mapAirfare.html">Discounted airfares</a></li>
+                            <li><a href="flightStatusAirfare.html" class="flight1">Flight status</a></li>
+                            <li><a href="#">Check-in and seat selection</a></li>
+                            <li><a href="#">Refund and rescheduling</a></li>
+                            <li><a href="#">Reimbursement vouchers</a></li>
+                            <li><a href="guideAirfare.html">Airport Guide</a></li>
+                            <li><a href="customizedAirfare.html">Customized charter flights</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="train">
+                        <a href="#">
+                            <i class="fa-solid fa-train"></i>
+                            <span class="text">Train tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Domestic train tickets</a></li>
+                            <li><a href="#">International/Hong Kong,Macao and Taiwan</a></li>
+                        </ul>
+                        <div class="hover-description">Train tickets</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="travels">
+                        <a href="#">
+                            <i class="fa-solid fa-flag"></i>
+                            <span class="text">Travel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Tourism Homepage</a></li>
+                            <li><a href="#">Group tour</a></li>
+                            <li><a href="#">Private tour</a></li>
+                            <li><a href="#">Independent travel</a></li>
+                            <li><a href="#">Cruise ship</a></li>
+                            <li><a href="#">Day trip</a></li>
+                            <li><a href="#">Customized travel</a></li>
+                            <li><a href="#">Local tours</a></li>
+                            <li><a href="#">High-end travel</a></li>
+                            <li><a href="#">Theme Tour</a></li>
+                            <li><a href="#">Study Abroad</a></li>
+                            <li><a href="#">Visa</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Coporate MICE</a></li>
+                            <li><a href="#">Destination</a></li>
+                        </ul>
+                        <div class="hover-description">Travel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="tickets">
+                        <a href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span class="text">Tickets & Events</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Sub-menu Item X</a></li>
+                            <li><a href="#">Sub-menu Item Y</a></li>
+                        </ul>
+                        <div class="hover-description">Tickets & Events</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="Bus&Boat">
+                        <a href="#">
+                            <i class="fa-solid fa-bus"></i>
+                            <span class="text">Bus and boat tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="busTicket.html">Bus ticket</a></li>
+                            <li><a href="boatTicket.html">Boat ticket</a></li>
+                        </ul>
+                        <div class="hover-description">Bus and boat tickets</div>
+                    </li>
+
+                    <li class="menu-item " data-menu="Car">
+                        <a href="#">
+                            <i class="fa-solid fa-car"></i>
+                            <span class="text">Car</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticCarRental.html">Domestic car rental</a></li>
+                            <li><a href="overseaCaarRental.html">Overseas car rental</a></li>
+                            <li><a href="airportpickup.html">Airport pick-up and drop-off station</a></li>
+                            <li><a href="dailyCarRental.html">Daily car rental</a></li>
+                        </ul>
+                        <div class="hover-description">Car</div>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </aside>
+
+
+ <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-content">
+
+                    <div class="logo-section">
+                        <img class="logo" src="img/kimberley.jpg">
+                        <span class="website-name">Kimberley</span>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for anything related to travel">
+                        <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="#">Log in</a><span>|</span>
+                        <a href="#">Register</a><span>|</span>
+
+                        <div class="dropdown-container" id="myOrdersDropdown">
+                            <a href="#" class="dropdown-toggle">My Orders <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu order-dropdown-menu">
+                                <a href="#"><i class="fa-solid fa-plane"></i> Flight tickets and related orders</a>
+                                <a href="#"><i class="fa-solid fa-hotel"></i> Hotel bookings</a>
+                                <a href="#"><i class="fa-solid fa-map-location-dot"></i> Travel orders</a>
+                                <a href="#"><i class="fa-solid fa-train"></i> Train ticket orders</a>
+                                <a href="#"><i class="fa-solid fa-list-ul"></i> All orders</a>
+                                <hr>
+                                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i> Check orders via phone</a>
+                            </div>
+                        </div>
+
+                        <span>|</span>
+
+                        <div class="dropdown-container" id="contactCustomerServiceDropdown">
+                            <a href="#" class="dropdown-toggle">Contact customer service <i
+                                    class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu contact-dropdown-menu">
+                                <a href="#" class="customer-center">Visit Customer Center ></a>
+                                <hr>
+                                <p>Domestic: 95010 / 400-830-6666</p>
+                                <p>HK: +852-3008-3295</p>
+                                <p>Macao: +86-21 3406-4888</p>
+                                <p>Taiwan: +86-21 3406-4888</p>
+                                <p>Other regions: +86-21 3406-4888</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="icon-link"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-heart"></i></a>
+                        <div class="theme-toggle" id="theme-toggle">
+                            <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                            <label for="theme-switch" class="theme-switch-label">
+                                <span class="theme-switch-inner"></span>
+                                <span class="theme-switch-slider"></span>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+
+
+
+
+
+
+
+    <div class="page-container">
+    
+    <main class="main-content-flex">
+
+        <div class="scroll-target-box"> 
+            
+            <section class="book-hotel-section">
+                <header class="form-header">
+                    <div class="form-title theme-text-primary">Book a hotel</div>
+                    <div class="safety-badges">
+                         <span class="theme-text-primary"><i class="fas fa-check-circle"></i> 安心订</span>
+                         <span class="theme-text-primary"><i class="fas fa-bed"></i> 放心住</span>
+                    </div>
+                </header>
+                
+                <div class="booking-form theme-border-color">
+                    
+                    <div class="input-row top-row-combined theme-border-color"> 
+                        <div class="input-group destination-hotel-name">
+                            <label>Destination/Hotel Name</label>
+                            <input type="text" value="上海">
+                        </div>
+                        <div class="input-group check-in theme-border-color">
+                            <label>Check-in</label>
+                            <input type="text" value="5 November (today)">
+                        </div>
+                        <div class="input-group check-out">
+                            <label>Check out</label>
+                            <input type="text" value="6 November (tomorrow)">
+                        </div>
+                    </div>
+
+                    <div class="input-row bottom-row-combined">
+                        <div class="input-group detail-item rooms-guests theme-border-color">
+                            <label>Rooms and guests</label>
+                            <select><option>1 room, 1 p.</option></select>
+                        </div>
+                        <div class="input-group detail-item hotel-level theme-border-color">
+                            <label>Hotel level</label>
+                            <select><option>No limit</option></select>
+                        </div>
+                        <div class="input-group detail-item keyword theme-border-color">
+                            <label>Keywords (optional)</label>
+                            <input type="text" placeholder="Airport/Train Station/Hotel...">
+                        </div>
+                        <button class="search-btn theme-bg-primary theme-border-primary"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+
+                <div class="business-banner">
+                    <p>Ctrip Business Travel helps companies <span>save up to 30% on travel expenses</span></p>
+                    <button>Free registration to receive coupon package <i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="utility-buttons">
+                    <div class="utility-box ai-assistant theme-border-primary">
+                        <i class="fas fa-robot theme-text-primary"></i>
+                        <div class="utility-text">
+                            <h4 class="theme-text-primary">AI Trip Assistant</h4>
+                            <p>One-stop solution for a perfect journey</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    
+                    <div class="utility-box tourist-map theme-border-primary">
+                        <i class="fas fa-map-marked-alt theme-text-primary"></i>
+                        <div class="utility-text">
+                            <h4 class="theme-text-primary">Tourist Map</h4>
+                            <p>Explore Great Places to Go</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                </section>
+            
+            <section class="hotel-recommendations-section">
+                <h2 class="section-title-small">Hotel <span class="theme-text-primary">Recommendations</span></h2>
+                <div class="nav-tabs">
+                    <span class="tab active" data-city="shanghai">Shanghai</span>
+                    <span class="tab" data-city="beijing">Beijing</span>
+                    <span class="tab" data-city="guangzhou">Guangzhou</span>
+                    <span class="tab" data-city="sanya">Sanya</span>
+                    
+                    <span class="tab more-dropdown" data-city="more">More <i class="fas fa-caret-down"></i>
+                        <div class="dropdown-content">
+                            <span data-city="hangzhou">Hangzhou</span>
+                            <span data-city="chengdu">Chengdu</span>
+                            <span data-city="nanjing">Nanjing</span>
+                            <span data-city="chongqing">Chongqing</span>
+                            <span data-city="shenzhen">Shenzhen</span>
+                            <span data-city="xiamen">Xiamen</span>
+                            <span data-city="wuhan">Wuhan</span>
+                            <span data-city="harbin">Harbin</span>
+                            <span data-city="suzhou">Suzhou</span>
+                            <span data-city="zhengzhou">Zhengzhou</span>
+                            <span data-city="fuzhou">Fuzhou</span>
+                            <span data-city="hongkong">Hong Kong</span>
+                        </div>
+                    </span>
+                </div>
+                <div class="hotel-list" id="hotel-list-container">
+                    </div>
+            </section>
+            <section class="hot-deals-and-flights-section">
+                <h2>Seasonal Hot Push <span class="departure-info">Departure: Shanghai</span></h2>
+                <div class="seasonal-hot-push-container">
+                    <div class="seasonal-selling-tours">
+                        <h3>Seasonal selling and group tours <i class="fas fa-chevron-right"></i></h3>
+                        <div class="deal-item"><img src="IMG.jpg" alt="Putuoshan"><div class="deal-text"><h4>Zhejiang Putuoshan 2 days 1 night with th...</h4><p class="sub-detail">4.7Sub-division | 32191 People travel.</p><span class="price">From $398</span></div></div>
+                        <div class="deal-item"><img src="IMG1.jpg" alt="Huangshan"><div class="deal-text"><h4>Huangshan Scenic Area 3 days and 2...</h4><p class="sub-detail">4.9Sub-division | 2645 People travel.</p><span class="price">From 1758</span></div></div>
+                        <div class="deal-item"><img src="IMG2.jpg" alt="Huangshan"><div class="deal-text"><h4>Huangshan + Hongcun 3 days and...</h4><p class="sub-detail">4.9Sub-division | 2461 People travel.</p><span class="price">From 1427</span></div></div>
+                        <div class="deal-item"><img src="IMG3.jpg" alt="Putuoshan"><div class="deal-text"><h4>Zhejiang Putuoshan 2 days 1 night with th...</h4><p class="sub-detail">4.8Sub-division | 1246 People travel.</p><span class="price">From $600</span></div></div>
+                        <div class="deal-item"><img src="IMG4.jpg" alt="Suzhou"><div class="deal-text"><h4>Suzhou + Wuzhen + Hangzhou 3 days 2...</h4><p class="sub-detail">4.8Sub-division | 25059 People travel.</p><span class="price">From $496</span></div></div>
+                    </div>
+                    <div class="weekend-flights-container">
+                        <h3>Weekend Tour and Cheap Flights <i class="fas fa-chevron-right"></i></h3>
+                        <div class="flight-item"><img src="IMG5.jpg" alt="Dalian"><div class="flight-text"><h4>Shanghai → Dalian</h4><p class="flight-detail">Ctrip Select | 1.3Compromise</p><p class="flight-dates">11-15 Go 11-17 Back</p><span class="price">$398</span></div></div>
+                        <div class="flight-item"><img src="IMG6.jpg" alt="Huizhou"><div class="flight-text"><h4>Shanghai → Huizhou</h4><p class="flight-detail">Ctrip Select | 1.4Compromise</p><p class="flight-dates">11-29 Go 12-02 Back</p><span class="price">$400</span></div></div>
+                        <div class="flight-item"><img src="IMG7.jpg" alt="Changchun"><div class="flight-text"><h4>Shanghai → Changchun</h4><p class="flight-detail">Ctrip Select | 0.9Compromise</p><p class="flight-dates">11-15 Go 11-18 Back</p><span class="price">From 420</span></div></div>
+                        <div class="flight-item"><img src="IMG8.jpg" alt="Hefei"><div class="flight-text"><h4>Shanghai → Hefei</h4><p class="flight-detail">Ctrip Select | 2.1Compromise</p><p class="flight-dates">11-15 Go 11-16 Back</p><span class="price">From 475</span></div></div>
+                        <div class="flight-item"><img src="IMG9.jpg" alt="Hangzhou"><div class="flight-text"><h4>Shanghai → Hangzhou</h4><p class="flight-detail">Ctrip Select | 2.0Compromise</p><p class="flight-dates">11-21 Go 11-22 Back</p><span class="price">From 458</span></div></div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+        
+        <div class="side-ad-box sticky-carousel-container">
+            
+            <div class="theme-switcher-container">
+                <button id="mode-toggle-btn">
+                    <i class="fas fa-sun"></i> <span>Light Mode</span>
+                </button>
+                <div class="color-options">
+                    <div class="color-option orange" data-color="orange" title="Orange Theme"></div>
+                    <div class="color-option jade" data-color="jade" title="Jade Theme"></div>
+                </div>
+            </div>
+            
+             <div class="ad-carousel-wrapper">
+                 
+                 <div class="carousel-slides">
+                     
+                     <div class="slide active" style="background-image: url('IMG8.jpg">
+                         <div class="carousel-title-box">
+                             <p>Hefei Hotel Word of Mouth List</p>
+                             <p>12°C to 20°C</p>
+                         </div>
+                         <div class="hotel-overlay-list">
+                             <div class="overlay-item"><img src="11.jpg"><p>Grand Hyatt Hefei</p><span class="price">From 1426.0</span></div>
+                             <div class="overlay-item"><img src="11.jpg"><p>Shangri-La Hotel</p><span class="price">From 939.0</span></div>
+                             <div class="overlay-item"><img src="11.jpg"><p>The Westin Hefei</p><span class="price">From 700.0</span></div>
+                         </div>
+                         <div class="carousel-list-footer theme-bg-primary">kimberley Word of Mouth List</div>
+                     </div>
+                     
+                     <div class="slide" style="background-image: url'IMG9.jpg">
+                         <div class="carousel-title-box">
+                             <p>Beihai Hotel Word of Mouth List</p>
+                             <p>19°C to 21°C</p>
+                         </div>
+                         <div class="hotel-overlay-list">
+                             <div class="overlay-item"><img src="12.jpg"><p>Shangri-La Hotel</p><span class="price">From 558.0</span></div>
+                             <div class="overlay-item"><img src="12.jpg"><p>Beihai Yinchuan</p><span class="price">From 477.0</span></div>
+                             <div class="overlay-item"><img src="12.jpg"><p>Hilton Hotel Bei...</p><span class="price">From 311.0</span></div>
+                         </div>
+                         <div class="carousel-list-footer theme-bg-primary">kimberley Word of Mouth List</div>
+                     </div>
+
+                     <div class="slide" style="background-image: url('IMG10.jpg">
+                         <div class="carousel-title-box">
+                             <p>Shanghai Hotel Word of Mouth List</p>
+                             <p>15°C to 25°C</p>
+                         </div>
+                         <div class="hotel-overlay-list">
+                             <div class="overlay-item"><img src="IMG.jpg"><p>Shanghai Hotel 1</p><span class="price">From 800.0</span></div>
+                             <div class="overlay-item"><img src="IMG.jpg"><p>Shanghai Hotel 2</p><span class="price">From 750.0</span></div>
+                             <div class="overlay-item"><img src="IMG.jpg"><p>Shanghai Hotel 3</p><span class="price">From 650.0</span></div>
+                         </div>
+                         <div class="carousel-list-footer theme-bg-primary">kimberley Word of Mouth List</div>
+                     </div>
+
+                     <div class="slide" style="background-image: url('IMG7.jpg">
+                         <div class="carousel-title-box">
+                             <p>Xiamen Hotel Word of Mouth List</p>
+                             <p>20°C to 28°C</p>
+                         </div>
+                         <div class="hotel-overlay-list">
+                             <div class="overlay-item"><img src="IMG.jpg"><p>Xiamen Hotel A</p><span class="price">From 1100.0</span></div>
+                             <div class="overlay-item"><img src="IMG.jpg"><p>Xiamen Hotel B</p><span class="price">From 950.0</span></div>
+                             <div class="overlay-item"><img src="IMG.jpg"><p>Xiamen Hotel C</p><span class="price">From 880.0</span></div>
+                         </div>
+                         <div class="carousel-list-footer theme-bg-primary">kimberley Word of Mouth List</div>
+                     </div>
+
+                 </div>
+                 
+                 <div class="carousel-indicators">
+                     <span class="indicator active"></span>
+                     <span class="indicator"></span>
+                     <span class="indicator"></span>
+                     <span class="indicator"></span>
+                 </div>
+                 
+             </div>
+             <div class="ctrip-business-banner theme-bg-primary theme-border-primary"><img src="logo.jpg" alt="Ctrip Business Travel"><p>kimberley Group's one-stop corporate travel service platform</p></div>
+        </div>
+        </main>
+    
+    <section class="business-and-security-section normal-flow-section">
+        <h2>Business Travel</h2>
+        <div class="business-services">
+            <div class="service-box theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-briefcase theme-text-primary"></i>
+                <h4 class="theme-text-primary">One-stop corporate travel services</h4>
+                <p>Massive travel products, full-process services, intelligent control, help enterprises cost savings of up to 30%!</p>
+            </div>
+            <div class="service-box theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-credit-card theme-text-primary"></i>
+                <h4 class="theme-text-primary">Public settlement</h4>
+                <p>15 minutes of fast opening of the company account, 30+20 days of long accounting period, self-service reconciliation, unified invoicing, distribution!</p>
+            </div>
+            <div class="service-box theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-user-tie theme-text-primary"></i>
+                <h4 class="theme-text-primary">Tailor-made business programs</h4>
+                <p>Powerful product technology & service solutions to support the scale of more than 500 large enterprises customized</p>
+            </div>
+        </div>
+        
+        <h2>Travel security</h2>
+        <div class="travel-security">
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-hotel theme-text-primary"></i>
+                <h4 class="theme-text-primary">Hotel - Reassured to live.</h4>
+                <p>1.7 million hotels in more than that... No price increase after confir</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-plane theme-text-primary"></i>
+                <h4 class="theme-text-primary">Airline tickets - Rest assured to fly.</h4>
+                <p>Nearly 2 million global routes... One-stop after-sales service.</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-train theme-text-primary"></i>
+                <h4 class="theme-text-primary">Train tickets - Rest assured.</h4>
+                <p>Price transparency, refunds a Additional costs to ensure gu...</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-umbrella-beach theme-text-primary"></i>
+                <h4 class="theme-text-primary">Tourism - Rest assured to play.</h4>
+                <p>Open tens of thousands of tr... 7*24-hour emergency respon</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-hand-holding-usd theme-text-primary"></i>
+                <h4 class="theme-text-primary">Finance - Reassured to pay.</h4>
+                <p>Diversified products Compliance guarantee, speci</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-utensils theme-text-primary"></i>
+                <h4 class="theme-text-primary">Gourmet - Reassuring to eat.</h4>
+                <p>The whole city food package Quality Preferred, Price Guar</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-user-check theme-text-primary"></i>
+                <h4 class="theme-text-primary">Member - Reassured to use.</h4>
+                <p>Multiple products and multipli The more reservations, the m...</p>
+            </div>
+            <div class="security-item theme-border-primary theme-bg-secondary-light">
+                <i class="fas fa-video theme-text-primary"></i>
+                <h4 class="theme-text-primary">Live Streaming - Rest assured to walk.</h4>
+                <p>Travel special live broadcast Big Boss is on a regular basi</p>
+            </div>
+        </div>
+        
+        <div class="partnerships-banners">
+             <div class="banner-item hotel-join theme-bg-secondary-light theme-border-primary"><p class="theme-text-primary">Hotel Joining</p></div>
+             <div class="banner-item agent-join theme-bg-secondary-light theme-border-primary"><p class="theme-text-primary">Agent Joining</p></div>
+             <div class="banner-item ebook-admin theme-bg-secondary-light theme-border-primary"><p class="theme-text-primary">eBooking Hotel Management Backstage</p></div>
+        </div>
+    </section>
+    
+    <footer class="main-footer-links normal-flow-section">
+        <h3 class="footer-title">Partners</h3>
+        <div class="main-partners">
+            <img src="[Partner Logo 1 - Qunar]" alt="Qunar"><img src="[Partner Logo 2 - Tuniu]" alt="Tuniu">
+            <img src="[Partner Logo 3 - China Travel]" alt="China Travel"><img src="[Partner Logo 4 - Other]" alt="Other Partner">
+        </div>
+
+        <div class="footer-navigation-detailed">
+            <div class="nav-section">
+                <h3>kimberley Navigation</h3>
+                <p>Hotel Reservation, Overseas H..., Cheap tickets, International..., Tourist routes, Tickets for pl..., Travel Tips, Train tickets, Cruise Line, Weekend tour, Visa, Car Rental, Eurail Pass, Free-walking, Conference..., Gift Cards, Team tour, Business Tr..., View all.</p>
+            </div>
+            <div class="nav-section">
+                <h3>Hotel Reservation</h3>
+                <p>Ctrip Hotel official website provides you with hotel reservation and price inquiry services in more than 200 countries and regions and more than 90,000 cities around the world, covering more than 1.7 million hotels. Provide a variety of accommodation types, including: hotels, hotels, hostels, inns, bed and breakfasts, economy chain, hotel apartments, youth hostels, farmhouses, villas, special accommodation and so on. At the same time, it provides various types of information such as hotel pictures, room photos, hotel phone calls, hotel addresses and hotel reviews of real users, so that users can choose.<br>Beijing Hotel, Shanghai H..., Guangzhou..., Shenzhen H..., Nanjing Hotel, Hangzhou H..., Chengdu Hotel, Xiamen Hotel, Qingdao Hotel, Sanya Hotel, Hong Kong..., Macau Hotels.</p>
+            </div>
+            <div class="nav-section">
+                <h3>Cheap Flights</h3>
+                <p>Flights to Sh..., Flights to Be..., Flights to Gu..., Flights to Sh..., Category: Fli..., Flight tickets, Kunming tic..., Sanya ticket, Flights to Ha..., Spring Airlines, Eastern Airl....</p>
+            </div>
+            <div class="nav-section">
+                <h3>Holidays on vacation</h3>
+                <p>Domestic to..., Outbound tr..., Category: To..., Phuket Touri..., Bali Tourism, Jeju Island T..., Category: To..., Tourism in S..., Tourism in A..., Dubai Tourism, Category: To....</p>
+                <h3>Raiders Guide</h3>
+                <p>Raiders Co..., Travel Tips, Traveling, Travel Quest..., Weekend tra..., Weather for..., Map full, Travel Guide, Business Tr..., Small and m..., Business tra....</p>
+                <h3>Quick entrance</h3>
+                <p>Navigation o..., Selected De..., Certificate of..., Ctrip Theme..., Schedule of..., Hotel naviga..., Brand Hotel, Hotel full, Hotel rules, National Hotel eBook..., Gift Cards.</p>
+            </div>
+        </div>
+
+        <div class="footer-navigation-detailed">
+             <div class="nav-section">
+                <h3>Travel information</h3>
+                <p>Hotel Index, Raiders Index, Ticket index, Website navigation, Index of tourism, Cruise Index, Corporate Travel Index.</p>
+            </div>
+            <div class="nav-section">
+                <h3>Joining the Partnership</h3>
+                <p>Distribution Alliance, Friendly Links, Insurance agent, Corporate Gift Card Purchase, Hotel Joining, Agents of cooperation, More collaborations, Destination and Scenic Area Cooperation.</p>
+            </div>
+            <div class="nav-section">
+                <h3>About Ctrip</h3>
+                <p>About Ctrip, Ctrip Hotspot, Contact Us, User Agreement, Accenture to Excellence, Business license, Privacy Policy, Security Center, Ctrip Content Center, Intellectual property rights, Trip.com Group.</p>
+            </div>
+            <div class="nav-section contact-qr">
+                <h3>Contact</h3>
+                <p>Within the country 95010 or 400-830-6666. Hong Kong, China: +852-3008-3295. Macao, China: +86-21-3406-4888. Taiwan, Taiwan: +86-21-3406-4888. Other countries and regions: +86-21-3406-4888.</p>
+                <img src="QR code.jpg" alt="Download kimberley TokTok">
+            </div>
+        </div>
+        
+        <div class="copyright-section">
+            <p>Copyright ©1999-2025, ctrip.com. All rights reserved. | ICP certificate: Shanghai B2-20050130 | Shanghai ICP No. 08023580 No. -3 |... (Other long license numbers/logos)</p>
+                        <p class="regulatory-links">
+                <span><i class="fas fa-star"></i> Shanghai Public Network No. 31010502002731</span>
+                | <span>Internet Drug Information Service Qualification</span> 
+                | <span>(Shanghai) Network Equipment Platform Preparation [2022] No. 00001</span> 
+                | <span>The net food is No. 1050001.</span> 
+                | <span>Travel and Holiday Qualification</span> 
+                | <span>Platform Information</span>
+            </p>
+            <p>Illegal and bad information report phone 021-22500848 | National Tourism Complaint Hotline 12345</p>
+        </div>
+        
+        <div class="footer-logos">
+            <img src="shanghai_logo.png" alt="Shanghai Logo" style="width: 40px; height: auto;">
+            <img src="shanghai_logo2.png" alt="Shanghai Logo 2" style="width: 40px; height: auto;">
+            <img src="security_logo.png" alt="Security Logo" style="width: 40px; height: auto;">
+            <img src="china_mobile_logo.png" alt="China Mobile" style="width: 40px; height: auto;">
+            <img src="online_security_badge.png" alt="Online Security" style="width: 100px; height: auto;">
+            <img src="accessibility_icon.png" alt="Accessibility" style="width: 40px; height: auto;">
+            <img src="accessibility_icon_2.png" alt="Accessibility 2" style="width: 40px; height: auto;">
+                </div>
+            <div class="gov-logos">...</div>
+        </div>
+    </footer>
+    
+    </div>
+
+    <script src="Domesticjotelscript.js"></script>
+</body>
+</html>

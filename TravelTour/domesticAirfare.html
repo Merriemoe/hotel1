@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimberley Travel & Tour | Flights - Domestic</title>
+    <link rel="icon" type="image/png" href="img/kimberley.jpg">
+    <link rel="stylesheet" href="domesticAirfareStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar collapsed" id="sidebar">
+
+            <!-- Hamburger inside sidebar -->
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav>
+                <ul>
+                    <li class="menu-item " data-menu="hotel">
+                        <a href="#">
+                            <i class="fa-solid fa-hotel"></i>
+                            <span class="text">Hotel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Domestic hotels</a></li>
+                            <li><a href="#">Overseas Hotels</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item active" data-menu="flight">
+                        <a href="#">
+                            <i class="fa-solid fa-plane"></i>
+                            <span class="text">Airfare</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticAirfare.html" class="flight1">Domestic/International,Hong Kong,Macao
+                                    andTaiwan</a></li>
+                            <li><a href="mapAirfare.html">Discounted airfares</a></li>
+                            <li><a href="flightStatusAirfare.html">Flight status</a></li>
+                            <li><a href="#">Check-in and seat selection</a></li>
+                            <li><a href="#">Refund and rescheduling</a></li>
+                            <li><a href="#">Reimbursement vouchers</a></li>
+                            <li><a href="guideAirfare.html">Airport Guide</a></li>
+                            <li><a href="customizedAirfare.html">Customized charter flights</a></li>
+                        </ul>
+                        <div class="hover-description">Hotel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="train">
+                        <a href="#">
+                            <i class="fa-solid fa-train"></i>
+                            <span class="text">Train tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Domestic train tickets</a></li>
+                            <li><a href="#">International/Hong Kong,Macao and Taiwan</a></li>
+                        </ul>
+                        <div class="hover-description">Train tickets</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="travels">
+                        <a href="#">
+                            <i class="fa-solid fa-flag"></i>
+                            <span class="text">Travel</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Tourism Homepage</a></li>
+                            <li><a href="#">Group tour</a></li>
+                            <li><a href="#">Private tour</a></li>
+                            <li><a href="#">Independent travel</a></li>
+                            <li><a href="#">Cruise ship</a></li>
+                            <li><a href="#">Day trip</a></li>
+                            <li><a href="#">Customized travel</a></li>
+                            <li><a href="#">Local tours</a></li>
+                            <li><a href="#">High-end travel</a></li>
+                            <li><a href="#">Theme Tour</a></li>
+                            <li><a href="#">Study Abroad</a></li>
+                            <li><a href="#">Visa</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Coporate MICE</a></li>
+                            <li><a href="#">Destination</a></li>
+                        </ul>
+                        <div class="hover-description">Travel</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="tickets">
+                        <a href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span class="text">Tickets & Events</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Sub-menu Item X</a></li>
+                            <li><a href="#">Sub-menu Item Y</a></li>
+                        </ul>
+                        <div class="hover-description">Tickets & Events</div>
+                    </li>
+
+                    <li class="menu-item" data-menu="Bus&Boat">
+                        <a href="#">
+                            <i class="fa-solid fa-bus"></i>
+                            <span class="text">Bus and boat tickets</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="busTicket.html">Bus ticket</a></li>
+                            <li><a href="boatTicket.html">Boat ticket</a></li>
+                        </ul>
+                        <div class="hover-description">Bus and boat tickets</div>
+                    </li>
+
+                    <li class="menu-item " data-menu="Car">
+                        <a href="#">
+                            <i class="fa-solid fa-car"></i>
+                            <span class="text">Car</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="domesticCarRental.html">Domestic car rental</a></li>
+                            <li><a href="overseaCaarRental.html">Overseas car rental</a></li>
+                            <li><a href="airportpickup.html">Airport pick-up and drop-off station</a></li>
+                            <li><a href="dailyCarRental.html">Daily car rental</a></li>
+                        </ul>
+                        <div class="hover-description">Car</div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+ <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-content">
+
+                    <div class="logo-section">
+                        <img class="logo" src="img/kimberley.jpg">
+                        <span class="website-name">Kimberley</span>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for anything related to travel">
+                        <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="#">Log in</a><span>|</span>
+                        <a href="#">Register</a><span>|</span>
+
+                        <div class="dropdown-container" id="myOrdersDropdown">
+                            <a href="#" class="dropdown-toggle">My Orders <i class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu order-dropdown-menu">
+                                <a href="#"><i class="fa-solid fa-plane"></i> Flight tickets and related orders</a>
+                                <a href="#"><i class="fa-solid fa-hotel"></i> Hotel bookings</a>
+                                <a href="#"><i class="fa-solid fa-map-location-dot"></i> Travel orders</a>
+                                <a href="#"><i class="fa-solid fa-train"></i> Train ticket orders</a>
+                                <a href="#"><i class="fa-solid fa-list-ul"></i> All orders</a>
+                                <hr>
+                                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i> Check orders via phone</a>
+                            </div>
+                        </div>
+          <span>|</span>
+         <div class="dropdown-container" id="contactCustomerServiceDropdown">
+                            <a href="#" class="dropdown-toggle">Contact customer service <i
+                                    class="fa-solid fa-caret-down"></i></a>
+                            <div class="dropdown-menu contact-dropdown-menu">
+                                <a href="#" class="customer-center">Visit Customer Center ></a>
+                                <hr>
+                                <p>Domestic: 95010 / 400-830-6666</p>
+                                <p>HK: +852-3008-3295</p>
+                                <p>Macao: +86-21 3406-4888</p>
+                                <p>Taiwan: +86-21 3406-4888</p>
+                                <p>Other regions: +86-21 3406-4888</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="icon-link"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-heart"></i></a>
+                        <div class="theme-toggle" id="theme-toggle">
+                            <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+                            <label for="theme-switch" class="theme-switch-label">
+                                <span class="theme-switch-inner"></span>
+                                <span class="theme-switch-slider"></span>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+<div id="flight-booking-form-container">
+    <div class="tab-bar">
+                    <div class="tab active" data-tab="domestic"><a href="domesticAirfare.html" style="color: #333; text-decoration: none;">Domestic</a>
+                    </div>
+                    <div class="tab"><a href="#" style="color: white; text-decoration: none;">Discounted airfares</a></div>
+                    <div class="tab"><a href="flightStatusAirfare.html" style="color: white; text-decoration: none;">Flight status</a></div>
+                    <div class="tab"><a href="#" style="color: white; text-decoration: none;">Online seat selection</a></div>
+                    <div class="tab"><a href="#" style="color: white; text-decoration: none;">Refund</a></div>
+                    <div class="tab tab6"><a href="#" style="color: white; text-decoration: none;">More services</a></div>
+                </div>
+                <div class="trip-type-group">
+                    <label>
+                        <input type="radio" name="tripType" value="oneWay"> One Way
+                    </label>
+                    <label>
+                        <input type="radio" name="tripType" value="roundTrip" checked> Round Trip
+                    </label>
+                    <label>
+                        <input type="radio" name="tripType" value="multiPass"> Multi-pass (including gap passes) (?)
+                    </label>
+
+                    <div class="form-group"
+                        style="margin-left: auto; min-width: 150px; padding: 0 15px;margin-right: 20px; margin-top: -10px;margin-bottom: 4px; height: 42px;">
+                        <label for="cabin-class-select" style="position: absolute; top: 5px; left: 15px;">Cabin
+                            Class</label>
+                        <select id="cabin-class-select" class="input-display"
+                            style="padding-top: 10px; border: none; background: none; cursor: pointer;">
+                            <option value="economy">Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first">First</option>
+                            <option value="premium_economy">Premium Economy</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-controls">
+
+                    <div class="form-group" id="departure-group">
+                        <label for="departure-input">Departure point</label>
+                        <input type="text" class="input-display" id="departure-input" placeholder="Shanghai (SHA)"
+                            readonly>
+                    </div>
+
+                    <div class="form-group" id="destination-group">
+                        <label for="destination-input">Destination</label>
+                        <input type="text" class="input-display" id="destination-input" placeholder="Beijing (BJS)"
+                            readonly>
+                    </div>
+
+                    <div class="form-group date-group">
+                        <label for="departure-date">Departure Date</label>
+                        <input type="text" class="input-display flatpickr-input" id="departure-date"
+                            placeholder="2025-11-06 tomorrow" readonly>
+                    </div>
+
+                    <div class="form-group date-group" id="return-date-group">
+                        <label for="return-date">Return Date</label>
+                        <input type="text" class="input-display flatpickr-input" id="return-date"
+                            placeholder="2025-11-09 Sunday" readonly>
+                    </div>
+
+                    <div class="form-group" style="min-width: 180px;">
+                        <label>Passenger type</label>
+                        <div style="padding-top: 15px;">
+                            <label style="position: static; margin-right: 15px;">
+                                <input type="checkbox" name="passengerType" value="children"> With children
+                            </label>
+                            <label style="position: static;">
+                                <input type="checkbox" name="passengerType" value="baby"> With baby
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="search-button">Search</button>
+                </div>
+
+            </div>
+            <div class="ad-banner">
+                <img src="img/flightbanner.jpg" alt="Ad Banner"
+                    style="max-width: 1200px; height: auto; border-radius: 4px; height: 200px;">
+            </div>
+
+           <div id="city-selection-modal" class="city-modal">
+    <div class="city-modal-content">
+        <span class="city-close">&times;</span>
+        <h2>Select City</h2>
+
+        <div class="city-tabs">
+            <div class="city-tab active" data-city-type="domestic">Domestic</div>
+            <div class="city-tab" data-city-type="international">International</div>
+        </div>
+
+        <!-- Add City Section -->
+        <div class="city-add-box">
+            <input type="text" id="new-city-name" placeholder="City Name (e.g., Guangzhou)">
+            <input type="text" id="new-city-code" placeholder="IATA Code (e.g., CAN)">
+            <button id="add-city-btn">Add</button>
+        </div>
+
+        <div class="city-list-container" id="city-list-container"></div>
+
+        <input type="hidden" id="current-city-input">
+    </div>
+</div>
+
+
+            <div class="low-price-alert-container">
+                <div class="low-price-alert-header">
+                    <div class="low-price-left">
+                        <h2 class="alert-title">Low price express report</h2>
+                        <div class="departure-input">Departure: <input type="text"
+                                placeholder="Please enter your departure"></div>
+                    </div>
+                    <a href="#" class="more-destinations">More destinations ></a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <button class="nav-button prev-button" aria-label="Previous"></button>
+                    <div class="carousel-content">
+                        <div class="card-page active" data-page="1">
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style="background-color: #22bcb0; padding:20px 0px; color: white;">Savor the
+                                    historical city ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday,November 15,2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style="background-color: #ff6e6e; padding:20px 0px; color: white;">Must-visit
+                                    spots for online influencers ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #5d98ff; color: white;">Listen to
+                                    the charm of the ancient town ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="card-page" data-page="2">
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #22bcb0; color: white;">Food Ranking >
+                                </h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #ff6e6e; color: white;">Listen to
+                                    the charm of the ancient town ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #5d98ff; color: white;">Savor the
+                                    historical city ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                               <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                               <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-page" data-page="3">
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #22bcb0; color: white;">Traveling to
+                                    famous mountains and rivers ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #ff6e6e; color: white;">Weekend
+                                    worry-free travel ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #5d98ff; color: white;">Savor the
+                                    historical city ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-page" data-page="4">
+                            <div class="card-category">
+                                <h3 class="category-title"
+                                    style=" padding:20px 0px;background-color: #22bcb0; color: white;">Falling in
+                                    love with the grasslands ></h3>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                                <div class="flight-card">
+                                    <div style="display: flex;">
+                                    <div class="card-img-placeholder"
+                                        style="background-image: url(img/OIP.jpg);"></div>
+                                    <div>
+                                    <p class="flight-info">Shan... → Chan...<br> <span class="price-from">From ¥ 200</span>
+                                    </p></div></div>
+                                    <div class="CardRightPlacement">
+                                    <p class="flight-date">Saturday, November 15, 2025</p>
+                                    <p class="discount">0.9 discount</p></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button class="nav-button next-button" aria-label="Next"></button>
+                </div>
+            </div>
+             <div class="low-price-map-container">
+                <div class="low-price-map-header">
+                    <h2 class="map-title">Low-price maps</h2>
+                    <div class="departure-point">Departure point: <input type="text"
+                            placeholder="Please enter your departure"></div>
+                    <a href="#" class="more-destinations">More destinations ></a>
+                </div>
+
+                <div class="map-content-wrapper">
+                    <div class="destination-list-panel">
+                        <h3 class="list-title">Lowest price destination within a month</h3>
+
+                        <div class="destination-card active">
+                            <div class="card-image-wrapper">
+                                <img src="img/OIP.jpg" alt="Xiamen" class="destination-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="city-line">
+                                    <span class="city-name">Xiamen</span>
+                                    <a href="#" class="more-flights">More flights ></a>
+                                </div>
+                                <p class="tag-line">
+                                    <span class="tag">Gulangyu</span>
+                                    <span class="tag">Xiamen Botanic...</span>
+                                </p>
+                                <p class="flight-detail">Went on Wednesday, December 3rd</p>
+                                <span class="price-display">¥ 200</span>
+                            </div>
+                            <div class="scroll-handle"></div>
+                        </div>
+
+                        <div class="destination-card">
+                            <div class="card-image-wrapper">
+                                <img src="img/OIP.jpg" alt="Harbin" class="destination-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="city-line">
+                                    <span class="city-name">Harbin</span>
+                                    <a href="#" class="more-flights">More flights ></a>
+                                </div>
+                                <p class="tag-line">
+                                    <span class="tag">Harbin Ice and ...</span>
+                                    <span class="tag">Northeast Tiger ...</span>
+                                </p>
+                                <p class="flight-detail">Go on Tuesday, November 11th</p>
+                                <span class="price-display">¥ 200</span>
+                            </div>
+                            <div class="scroll-handle"></div>
+                        </div>
+
+                        <div class="destination-card">
+                            <div class="card-image-wrapper">
+                                <img src="img/OIP.jpg" alt="Qingdao" class="destination-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="city-line">
+                                    <span class="city-name">Qingdao</span>
+                                    <a href="#" class="more-flights">More flights ></a>
+                                </div>
+                                <p class="tag-line">
+                                    <span class="tag">Qingdao Beer M...</span>
+                                    <span class="tag">Laoshan Scenic...</span>
+                                </p>
+                                <p class="flight-detail">Go on Sunday, November 9th</p>
+                                <span class="price-display">¥ 200</span>
+                            </div>
+                            <div class="scroll-handle"></div>
+                        </div>
+
+                        <div class="destination-card">
+                            <div class="card-image-wrapper">
+                                <img src="img/OIP.jpg" alt="Shanghai" class="destination-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="city-line">
+                                    <span class="city-name">Shanghai</span>
+                                    <a href="#" class="more-flights">More flights ></a>
+                                </div>
+                                <p class="tag-line">
+                                    <span class="tag">The Bund</span>
+                                    <span class="tag">Oriental Pearl...</span>
+                                </p>
+                                <p class="flight-detail">Go on Saturday, November 15th</p>
+                                <span class="price-display">¥ 230</span>
+                            </div>
+                            <div class="scroll-handle"></div>
+                        </div>
+
+                        <div class="destination-card">
+                            <div class="card-image-wrapper">
+                                <img src="img/OIP.jpg" alt="Beijing" class="destination-image">
+                            </div>
+                            <div class="card-info">
+                                <div class="city-line">
+                                    <span class="city-name">Beijing</span>
+                                    <a href="#" class="more-flights">More flights ></a>
+                                </div>
+                                <p class="tag-line">
+                                    <span class="tag">Great Wall</span>
+                                    <span class="tag">Forbidden City</span>
+                                </p>
+                                <p class="flight-detail">Go on Tuesday, November 18th</p>
+                                <span class="price-display">¥ 250</span>
+                            </div>
+                            <div class="scroll-handle"></div>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <div id="baidu-map-placeholder">
+                            <p class="map-note">Map content would be loaded here.</p>
+                            <div class="map-overlay">
+                                <div class="map-popup active" style="top: 55%; left: 60%;">
+                                    <img src="img/OIP.jpg" alt="Xiamen" class="popup-thumb">
+                                    <div class="popup-info">
+                                        <span class="popup-city">Xiamen</span>
+                                        <span class="popup-price">¥ 200</span>
+                                    </div>
+                                </div>
+                                <div class="map-controls">
+                                    <button class="map-control-btn zoom-in">+</button>
+                                    <button class="map-control-btn zoom-out">-</button>
+                                </div>
+                                <div class="map-full-screen-btn"></div>
+                            </div>
+                        </div>
+                        <div class="baidu-credit">
+                            <p>© 2025 Baidu - GS(2023)4125 - Class A Surveying and Mapping Qualification Certificate No.
+                                11111142 - Beijing ICP License No. 030173 - Data © Baidu Smart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="airline-offers-container">
+                <h2 class="section-title">Airline Special Offers Zone</h2>
+
+                <div class="logo-carousel-wrapper">
+                    <button class="nav-button prev-logo-button" aria-label="Previous Airlines"></button>
+                    <div class="logo-carousel-content">
+                        <div class="logo-group active" data-page="1">
+                            <button class="airline-logo" data-airline-id="airchina">
+                                <img src="img/airLogo.png" alt="Air China Logo">
+                                <span class="airline-name">Air China</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="chinasouthern">
+                                <img src="img/airLogo.png" alt="China Southern Logo">
+                                <span class="airline-name">China Southern</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="chinaeastern">
+                                <img src="img/airLogo.png" alt="China Eastern Logo">
+                                <span class="airline-name">China Eastern</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="shenzhen">
+                                <img src="img/airLogo.png" alt="Shenzhen Airlines Logo">
+                                <span class="airline-name">Shenzhen Airlines</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="luckyair">
+                                <img src="img/airLogo.png" alt="Lucky Air Logo">
+                                <span class="airline-name">Lucky Air</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="westair">
+                                <img src="img/airLogo.png" alt="West Air Logo">
+                                <span class="airline-name">West air</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="spring">
+                                <img src="img/airLogo.png" alt="Spring Airlines Logo">
+                                <span class="airline-name">Spring Airlines</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="hainan">
+                                <img src="img/airLogo.png" alt="Hainan Airlines Logo">
+                                <span class="airline-name">Hainan Airlines</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="juneyao">
+                                <img src="img/airLogo.png" alt="Juneyao Airlines Logo">
+                                <span class="airline-name">Juneyao Airlines</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="tianjin">
+                                <img src="img/airLogo.png" alt="Tianjin Airlines Logo">
+                                <span class="airline-name">Tianjin Airlines</span>
+                            </button>
+                        </div>
+                        <div class="logo-group" data-page="2">
+                            <button class="airline-logo" data-airline-id="airchina-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 11">
+                                <span class="airline-name">Air China 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="chinasouthern-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 12">
+                                <span class="airline-name">CS Air 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="chinaeastern-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 13">
+                                <span class="airline-name">CE Air 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="shenzhen-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 14">
+                                <span class="airline-name">Shenzhen 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="luckyair-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 15">
+                                <span class="airline-name">Lucky Air 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="westair-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 16">
+                                <span class="airline-name">West air 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="spring-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 17">
+                                <span class="airline-name">Spring Air 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="hainan-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 18">
+                                <span class="airline-name">Hainan Air 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="juneyao-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 19">
+                                <span class="airline-name">Juneyao 2</span>
+                            </button>
+                            <button class="airline-logo" data-airline-id="tianjin-2">
+                                <img src="img/airLogo.png" alt="Placeholder Logo 20">
+                                <span class="airline-name">Tianjin Air 2</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="nav-button next-logo-button" aria-label="Next Airlines"></button>
+                </div>
+                <div class="airline-details-section">
+
+    <!-- AIRLINE DETAILS (ALL IN SAME PLACE) -->
+    <div class="airline-detail-item active" data-airline-id="airchina">
+        <div class="detail-header">
+            <div class="edit-controls">
+                <button class="edit-btn">Edit</button>
+                <button class="save-btn" style="display:none;">Save</button>
+            </div>
+
+            <div class="logo-wrapper">
+                <img src="img/default-logo.png" class="large-logo">
+                <div class="camera-overlay"><i class="fas fa-camera"></i></div>
+                <input type="file" accept="image/*" class="img-upload-input" hidden>
+            </div>
+
+            <div class="description-box">
+                <p class="description-text">Air China Limited, commonly known as Air China, is China's only civil airline
+                    authorized to fly the national flag. It is a member of Star Alliance, the world's
+                    largest airline alliance, and the air passenger transport partner for the 2008
+                    Beijing Olympics. It boasts the highest brand value among domestic airlines 
+                    (valued at 76.560 billion yuan by the World Brand Lab in 2013)...</p>
+                <a href="#" class="view-more">View more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="airline-detail-item" data-airline-id="chinasouthern">
+        <div class="detail-header">
+            <div class="edit-controls">
+                <button class="edit-btn">Edit</button>
+                <button class="save-btn" style="display:none;">Save</button>
+            </div>
+
+            <div class="logo-wrapper">
+                <img src="img/airliner.jpg" class="large-logo">
+                <div class="camera-overlay"><i class="fas fa-camera"></i></div>
+                <input type="file" accept="image/*" class="img-upload-input" hidden>
+            </div>
+
+            <div class="description-box">
+                <p class="description-text">China Southern Airlines is based in Guangzhou, Guangdong
+                                    Province. It is one of the "Big Three" airlines in Mainland China (alongside Air
+                                    China and China Eastern Airlines)...</p>
+                <a href="#" class="view-more">View more</a>
+            </div>
+        </div>
+    </div>
+ 
+
+ <div class="departure-links-wrapper">
+                            <span class="departure-label">Departure point:</span>
+                            <div class="departure-links">
+                                <a href="#" class="departure-link active" data-city="beijing">Beijing</a>
+                                <a href="#" class="departure-link" data-city="shanghai">Shanghai</a>
+                                <a href="#" class="departure-link" data-city="tianjin">Tianjin</a>
+                                <a href="#" class="departure-link" data-city="chengdu">Chengdu</a>
+                                <a href="#" class="departure-link" data-city="chongqing">Chongqing</a>
+                                <a href="#" class="departure-link" data-city="xi'an">Xi'an</a>
+                                <a href="#" class="departure-link" data-city="wuhan">Wuhan</a>
+                                <a href="#" class="departure-link" data-city="guangzhou">Guangzhou</a>
+                                <a href="#" class="departure-link" data-city="shenzhen">Shenzhen</a>
+                            </div>
+                        </div>
+
+                        <div class="offer-cards-grid active" data-city="beijing">
+                            <div class="offer-card">
+                                
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Shanghai</p>
+                                <p class="date-discount">Saturday, November 8, 2025 <span class="discount">24%
+                                        off</span></p>
+                                <p class="price">Starting from <span class="price-value">¥ 500</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Chengdu</p>
+                                <p class="date-discount">Tuesday, November 11, 2025 <span class="discount">17%
+                                        off</span></p>
+                                <p class="price">Starting from <span class="price-value">¥ 480</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Guangzhou</p>
+                                <p class="date-discount">Wednesday, November 12, 2025 <span class="discount">17%
+                                        off</span></p>
+                                <p class="price">From <span class="price-value">¥ 540</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Shenzhen</p>
+                                <p class="date-discount">Tuesday, November 11, 2025 <span class="discount">17%
+                                        off</span></p>
+                                <p class="price">Starting from <span class="price-value">¥ 600</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Chongqing</p>
+                                <p class="date-discount">Tuesday, November 11, 2025 <span class="discount">16%
+                                        off</span></p>
+                                <p class="price">Starting from <span class="price-value">¥ 500</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Hangzhou</p>
+                                <p class="date-discount">Monday, November 10, 2025 <span class="discount">13% off</span>
+                                </p>
+                                <p class="price">Starting from <span class="price-value">¥ 400</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Kunming</p>
+                                <p class="date-discount">Wednesday, November 12, 2025 <span class="discount">26%
+                                        off</span></p>
+                                <p class="price">Starting from <span class="price-value">¥ 660</span></p>
+                            </div>
+                            <div class="offer-card">
+
+                                 <div class="card-edit-buttons">
+        <i class="far fa-edit card-edit"></i>
+        <i class="fas fa-check card-save"></i>
+    </div>
+                                <p class="route">Beijing → Sanya</p>
+                                <p class="date-discount">Tuesday, November 11, 2025 <span class="discount">30%
+                                        off</span></p>
+                                <p class="price">Starting from <span class="price-value">¥ 1330</span></p>
+                            </div>
+                        </div>
+
+                        <div class="offer-cards-grid" data-city="shanghai">
+                            <div class="offer-card">... Shanghai Offers ...</div>
+                        </div>
+
+                    </div>
+
+
+
+            <div class="service-footer-component">
+
+                <div class="top-service-links">
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="Trustworthy icon">✅</span>
+                        <span class="text">安心订 放心飞</span>
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="Trip guarantee icon">✈️</span>
+                        <span class="text">Trip guarantee</span>
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="Price guarantee icon">🏷️</span>
+                        <span class="text">Price guarantee</span>
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="24 hours service icon">📞</span>
+                        <span class="text">7*24 hours customer service</span>
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="Emergency assistance icon">🚨</span>
+                        <span class="text">Emergency assistance</span>
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="Peace of mind icon">🧘</span>
+                        <span class="text">Peace of mind 1+1</span>
+                    </a>
+                    <span class="separator">|</span>
+                    <a href="#" class="service-link">
+                        <span class="icon" role="img" aria-label="Combined transport icon">🚌</span>
+                        <span class="text">Combined transportation travel</span>
+                    </a>
+                </div>
+
+                <hr class="divider">
+
+                <div class="main-content-section">
+                    <div class="service-bulletin-area">
+                        <h3 class="area-title">Service Bulletin</h3>
+                        <div class="bulletin-links">
+                            <p>Air ticket booking service provider: <a href="#" class="bulletin-link">Shanghai Huacheng
+                                    Southwest International Travel Service Co, Ltd</a></p>
+                            <p>Notice on <a href="#" class="bulletin-link">Prohibition of Carrying Dangerous Goods on
+                                    Flights</a></p>
+                            <p><a href="#" class="bulletin-link">Reminder about fraudulent SMS calls</a></p>
+                        </div>
+                    </div>
+
+                    <div class="complaint-info-area">
+                        <p>How to accept complaints about <a href="#" class="bulletin-link">Kimberley air tickets</a></p>
+                        <p>Air ticket complaint acceptance hotline: <span class="info-value">95010</span></p>
+                        <p>Ticket complaint acceptance email: <span class="info-value">jawlws@kimberley.com</span></p>
+                    </div>
+
+                    <div class="qr-code-area">
+                        <div class="qr-box">
+                            <div class="qr-placeholder" style="background-image: url(img/qr.png);">
+                            </div>
+                            <div class="qr-text">
+                                <p class="qr-title">Ctrip APP</p>
+                                <p class="qr-description">Enjoy discounts on mobile phone orders<br>Check your order
+                                    anytime, anywhere</p>
+                            </div>
+                        </div>
+                        <div class="qr-box">
+                            <div class="qr-placeholder" style="background-image: url('img/qr.png');">
+                            </div>
+                            <div class="qr-text">
+                                <p class="qr-title">Kimberley special tickets</p>
+                                <p class="qr-description">A must-have for easy travel<br>Regular broadcast specials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-service-list">
+                    <p class="service-intro-text">
+                        Kimberley.com provides air ticket reservations and flight ticket inquiry schedules, fare inquiry and
+                        special air tickets, cheap air tickets, discount air ticket inquiry and booking services.
+                    </p>
+
+                    <div class="service-category">
+                        <span class="category-label">Popular routes:</span>
+                        <a href="#" class="service-item-link">Taiyuan to Beijing air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shanghai to Guilin air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Hangzhou to Wuhan air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Hongzhou to Guangzhou air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Wuhan to Shenzhen air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Xi'an to Shenzhen air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shenzhen to Shanghai air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Kunming to Shanghai air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shanghai to Dalian air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shanghai to Taiyuan air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Baotou to Beijing air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Xi'an to Guangzhou air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Fuzhou to Guangzhou air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Air tickets from Guangzhou to Xiamen</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Beijing to Zhenzhou air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Harbin to Shanghai air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Nanjing to Beijing air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Air tickets from Guiyang to Beijing</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Air tickets from Beijing to Shanghai</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Nanchang to Guangzhou air tickets</a>
+                    </div>
+
+                    <div class="service-category">
+                        <span class="category-label">Ticket Toolbox:</span>
+                        <a href="#" class="service-item-link">Discounted tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Flight schedule inquiry</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Flight status query</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Ticket map</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Check-in</a>
+                    </div>
+
+                    <div class="service-category">
+                        <span class="category-label">Discounted Tickets:</span>
+                        <a href="#" class="service-item-link">Special air tickets to Shanghai</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Special flights to Beijing</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Guangzhou special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shenzhen special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Chongqing special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Chengdu special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Kunming special flight tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Xiamen special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Special flights to Sanya</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Dalian special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Ujiang special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Tianjin special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Fuzhou special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shenyang special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Zhengzhou special flight tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Qingdao special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Xi'an special flight tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Nanjing special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Wuhan special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Hangzhou special air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">More special fares</a>
+                    </div>
+
+                    <div class="service-category">
+                        <span class="category-label">Air tickets:</span>
+                        <a href="#" class="service-item-link">Spring Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">China Eastern Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Southern Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Air China</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Hainan Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shenzhen Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Xiamen Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shandong Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Juneyao Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Capital Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Sichuan Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Happiness Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Air tickets</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Lucky Airlines</a>
+                        <span class="bullet">|</span>
+                        <a href="#" class="service-item-link">Shanghai Airlines</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="main-ctrip-footer">
+                <div class="footer-content-wrapper">
+
+                    <div class="footer-column travel-info">
+                        <h4 class="column-title">Travel Information</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">Hotel Index</a>
+                            <a href="#" class="footer-link">Strategy Index</a>
+                            <a href="#" class="footer-link">Flight Index</a>
+                            <a href="#" class="footer-link">Site Navigation</a>
+                            <a href="#" class="footer-link">Travel Index</a>
+                            <a href="#" class="footer-link">Cruise Index</a>
+                            <a href="#" class="footer-link">Corporate Travel Index</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column franchise-cooperation">
+                        <h4 class="column-title">Franchise cooperation</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">Distribution Alliance</a>
+                            <a href="#" class="footer-link">Friendly Links</a>
+                            <a href="#" class="footer-link">Insurance Agency Cooperation</a>
+                            <a href="#" class="footer-link">Gift card</a>
+                            <a href="#" class="footer-link">Hotel Franchise</a>
+                            <a href="#" class="footer-link">Destination</a>
+                            <a href="#" class="footer-link">More franchise opportunities</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column about-ctrip">
+                        <h4 class="column-title">About Kimberley</h4>
+                        <div class="column-links-grid">
+                            <a href="#" class="footer-link">About Ctrip</a>
+                            <a href="#" class="footer-link">Kimberley Hot Topics</a>
+                            <a href="#" class="footer-link">Contact Us</a>
+                            <!-- <a href="#" class="footer-link">We are looking to recruit talented individuals.</a> -->
+                            <a href="#" class="footer-link">User Agreement</a>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">Business License</a>
+                            <a href="#" class="footer-link">Security Center</a>
+                            <a href="#" class="footer-link">Kimberley Content Center</a>
+                            <a href="#" class="footer-link">Intellectual property</a>
+                            <a href="#" class="footer-link">Trip.com Group</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column contact-qr-area">
+                        <div class="contact-info">
+                            <p class="contact-header">Within the territory: <span class="phone-number">88010</span></p>
+                            <p class="contact-header">Or <span class="phone-number">400-830-6666</span></p>
+                            <p>Hong Kong, China: <span class="phone-number">+852-3008-3205</span></p>
+                            <p>Macau, China: <span class="phone-number">+86-21 3406-4888</span></p>
+                            <p>Taiwan, China: <span class="phone-number">+86-21 3406-4888</span></p>
+                            <p>Other countries and regions: <span class="phone-number">+86-21-3406-4888</span></p>
+                        </div>
+
+                        <div class="qr-download-box">
+                            <div class="qr-placeholder" style="background-image: url('img/qr.png');">
+                            </div>
+                            <p class="qr-caption">Scan the QR code to download the Kimberley App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-section">
+                    <hr class="bottom-divider">
+                    <p class="copyright-info">
+                        Copyright © 1999-2025, limberley.com. All rights reserved. | ICP License: 京ICP备0500130 | <a href="#"
+                            class="info-link">京ICP证030029号</a>-3 | <a href="#"
+                            class="info-link">闽ICP备0101051117491004200015号</a>
+                    </p>
+
+                    <p class="authority-info">
+                        <span class="authority-icon">🔴</span> <a href="#" class="info-link">Shanghai Public Security
+                            Bureau Registration No. 31010502002731</a> | <a href="#" class="info-link">Internet Drug
+                            Information Service Qualification Certificate</a> | <a href="#" class="info-link">
+                            (Shanghai) Online Medical Device Platform Registration No. (2022) 00031</a> | <a href="#"
+                            class="info-link">Shanghai Online Food Registration No. 0000011</a> | <a href="#"
+                            class="info-link"> Tourism and Vacation Qualification</a> | <a href="#"
+                            class="info-link">Platform Information</a>
+                    </p>
+
+                    <p class="report-info">
+                        Report hotline for illegal and harmful information: <span class="hotline">021-22230045</span> |
+                        National tourism complaint hotline: <span class="hotline">12345</span> | <a href="#"
+                            class="info-link commitment-link">Shanghai tourism website's commitment to fulfilling its
+                            main responsibility for integrity building</a>
+                    </p>
+
+                    <div class="certificate-logos" style="margin-left: 20%;">
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                        <div class="logo-placeholder" style="background-image: url(img/airLogo.png);"></div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="domesticAirfareScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</body>
+
+</html>

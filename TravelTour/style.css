@@ -1,0 +1,986 @@
+:root {
+  --ctrip-blue: #22bcb0;
+  --ctrip-orange: #22bcb0;
+  --ctrip-blue-dark:#0b3c37;
+  --ctrip-blue-low: #22bcaf42;
+  --bodyBg:#ffffff;
+  --headSideBg:#ffffff;
+  --footerBg:#f3f3f3;
+  --text-color:#333;
+  --sidebar-width-collapsed: 60px;
+  --sidebar-width-expanded: 250px;
+  --header-height: 60px;
+  --gold-text: #dab777;
+  --border-color:#5555552f;
+  --cardBg:#fff;
+
+
+  /* for toggle Light Theme (Default) */
+    --primary-bg: #ffffff;
+    --primary-text: #1a1a1a;
+    --header-bg: #f7f7f7;
+    --toggle-color: #22bcb0; /* Switch အတွက် အဓိကအရောင် */
+    --toggle-off-bg: #e9e9e9;
+    --toggle-on-bg: var(--toggle-color);
+}
+
+.dark-theme {
+    /* Dark Theme */
+    --ctrip-blue: #22bcb0;
+    --ctrip-orange: #22bcb0;
+    --headSideBg:#000000;
+    --bodyBg:#121212;
+    --footerBg:#171717;
+    --sidebar-width-collapsed: 60px;
+    --sidebar-width-expanded: 250px;
+    --header-height: 60px;
+    --gold-text: #EDBC6A;
+    --border-color:#c9c9c97e;
+    --cardBg:#141414;
+
+
+    /* for toggle Dark Theme */
+    --primary-bg: #1a1a1a;
+    --primary-text: #f0f0f0;
+    --header-bg: #2d2d2d;
+    --toggle-color: #22bcb0;
+    --toggle-off-bg: #ccc;
+    --toggle-on-bg: var(--toggle-color);
+}
+
+
+/* ------------------------------------------------------------------- */
+
+
+/* --- Theme Toggle Switch Styles --- */
+.theme-toggle {
+    display: inline-block;
+    position: relative;
+    /* Header ညာဘက်ထောင့်တွင် နေရာချရန် (သင့် Header စတိုင်ပေါ် မူတည်ပြီး ပြင်ပါ) */
+}
+
+.theme-switch-checkbox {
+    display: none; /* မူရင်း checkbox ကို ဖျောက်ထားပါ */
+}
+
+.theme-switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--toggle-off-bg);
+    border-radius: 20px;
+    height: 27px; /* Switch ရဲ့ အမြင့် */
+    width: 60px; /* Switch ရဲ့ အကျယ် */
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.theme-switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s;
+    /* Light/Dark Icon Placeholder (စာသား၊ emoji သို့မဟုတ် background-image အသုံးပြုနိုင်) */
+}
+
+.theme-switch-slider {
+    display: block;
+    width: 27px; /* အဝိုင်းလေးရဲ့ အကျယ် */
+    height: 27px; /* အဝိုင်းလေးရဲ့ အမြင့် */
+    background: #fff; /* အဝိုင်းလေးရဲ့ အရောင် */
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    right: 33px; /* Light (Default) အနေအထား */
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.112);
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+}
+
+/* Checkbox နှိပ်ထားရင် (Dark Theme) */
+.theme-switch-checkbox:checked + .theme-switch-label {
+    background-color: var(--toggle-on-bg);
+}
+
+.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-slider {
+    right: 0px; /* Dark Theme တွင် ညာဘက်သို့ ရွှေ့ပါ */
+}
+
+/* Icon (optional) */
+/* Light Icon (လမင်း) ကို Dark mode မှာ ထည့်ပြရန် */
+.theme-switch-checkbox:checked + .theme-switch-label::before {
+    content: '☀️'; 
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    font-size: 14px;
+    z-index: 2;
+}
+/* Dark Icon (နေမင်း) ကို Light mode မှာ ထည့်ပြရန် */
+.theme-switch-label::after {
+    content: '🌙';
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    font-size: 14px;
+    z-index: 2;
+}
+
+
+
+
+/* ------------------------------------------------------------------- */
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bodyBg);
+  color: var(--gold-text);
+  min-height: 100vh;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+  width: 100%;
+  height: var(--header-height);
+  /* background-color: #fff; */
+  background-color: var(--headSideBg);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  /* margin-left: 8%;
+  margin-right: 4%; */
+  height: 100%;
+}
+
+
+
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  gap: 5px;
+}
+
+.logo{
+  width: 50px;
+  margin-top: 0px;
+}
+
+.website-name {
+  font-size: 20px;
+  font-weight: bold;
+  /* color: #333; */
+  margin-top: 5px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid var( --border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: 20px;
+  color: var(--primary-text);
+}
+
+.search-bar input {
+  border: none;
+  padding: 8px 15px;
+  width: 250px;
+  outline: none;
+  background-color: var(--headSideBg);
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.search-bar button {
+  background-color: var(--ctrip-blue);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #22bcb0;
+}
+
+/* Header Nav */
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color:var(--primary-text);
+  padding: 0 10px;
+  font-size: 14px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.header-nav a:hover {
+  color: var(--ctrip-blue);
+}
+
+.header-nav span {
+  color: #ccc;
+  color:var(--primary-text);
+  font-size: 14px;
+}
+
+/* Dropdowns */
+.dropdown-container {
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 250px;
+  /* background-color: #fff; */
+  background-color: var(--headSideBg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 10px 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 15px;
+  color:var(--primary-text);
+  /* color: #666; */
+}
+
+.dropdown-menu a:hover {
+  /* background-color: #f5f5f5; */
+  background-color: var(--footerBg);
+}
+
+.dropdown-menu hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+
+.contact-dropdown-menu p {
+  padding: 5px 15px;
+  font-size: 13px;
+  /* color: #666; */
+  color:var(--ctrip-blue);
+}
+
+/* ===== LAYOUT ===== */
+/* .container {
+  display: flex;
+  margin-top: var(--header-height);
+} */
+
+/* ===== SIDEBAR ===== */
+
+.container {
+  display: flex;
+  margin-top: var(--header-height); /* ✅ Header still fixed */
+}
+
+.main-content {
+  margin-left: var(--sidebar-width-collapsed);
+  margin-top: var(--header-height);
+}
+
+.sidebar {
+  width: var(--sidebar-width-collapsed);
+  /* background-color: #fff; */
+  background-color: var(--headSideBg);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;                /* ✅ FIX: Sidebar full height */
+  left: 0;
+  height: 100vh;         /* ✅ Full height */
+  z-index: 1200;
+}
+
+/* Move hamburger button inside sidebar */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 3px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  color: var(--primary-text);
+}
+
+.sidebar-toggle:hover {
+  color: var(--ctrip-blue);
+}
+
+.sidebar:hover,
+.sidebar.expanded {
+  width: var(--sidebar-width-expanded);
+}
+
+.sidebar.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li.menu-item {
+  position: relative;
+  border-left: 3px solid transparent;
+}
+
+.sidebar li.menu-item a {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  text-decoration: none;
+  /* color: #333; */
+  color: var(--primary-text);
+  transition: background-color 0.2s, color 0.2s;
+  gap: 5px;
+}
+
+.sidebar li.menu-item ul a:hover {
+  background-color: var(--bodyBg);
+  color: var(--ctrip-blue);
+}
+
+.sidebar li.menu-item.active {
+  border-left-color: var(--ctrip-blue);
+  /* background-color: var(--bodyBg); */
+  background-color: var(--ctrip-blue-low);
+}
+.sidebar li.menu-item .flight1{
+  background-color: var(--bodyBg);
+  color: var(--ctrip-blue);
+}
+
+.sidebar i {
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  margin-left: 6px;
+  margin: 3px;
+}
+
+.sidebar .text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.sidebar:hover .text,
+.sidebar.expanded .text {
+  opacity: 1;
+}
+
+/* Sub-menu (hidden by default) */
+.sub-menu {
+  display: none;
+  background-color: var(--footerBg);
+  padding-left: 15px;
+}
+
+/* Show only when sidebar is expanded or hovered */
+.sidebar.expanded li.menu-item.active .sub-menu,
+.sidebar:hover li.menu-item.active .sub-menu {
+  display: block;
+  color: #333;
+}
+
+
+.sub-menu li a {
+  padding: 0px;
+  font-size: 14px;
+  color: #666;
+}
+
+.sub-menu li a .flight1:hover {
+  color: var(--ctrip-blue);
+}
+
+/* Hover description (collapsed only) */
+.hover-description {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: var(--sidebar-width-collapsed);
+  transform: translateY(-50%);
+  /* background-color: #ffffff00; */
+  color: rgba(255, 255, 255, 0);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.sidebar.collapsed li.menu-item:hover .hover-description {
+  display: block;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: var(--sidebar-width-collapsed);
+  padding: 20px auto;
+  /* margin-left: 8%;
+  margin-right:6%; */
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover ~ .main-content,
+.sidebar:hover ~ .header-content,
+.sidebar.expanded ~ .main-content {
+  margin-left: var(--sidebar-width-expanded);
+}
+
+
+.sidebar:hover {
+  width: var(--sidebar-width-expanded);
+}
+
+
+/* footer */
+
+/* Footer အခြေခံ ပုံစံ */
+.main-ctrip-footer {
+    background-color: var(--footerBg);
+    padding: 30px 20px 20px;
+    border-top: 1px solid var(--border-color);
+    font-family: Arial, sans-serif;
+}
+
+.footer-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.column-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--gold-text);
+    margin-top: 0;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.column-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ကော်လံ နှစ်ခု ခွဲရန် */
+    gap: 8px 15px;
+}
+
+.footer-link {
+    font-size: 12px;
+    color: var(--primary-text);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.footer-link:hover {
+    color: #22bcb0;
+}
+
+/* --- Contact Info and QR Code ကဏ္ဍ --- */
+.contact-qr-area {
+    flex: 1.5; /* နေရာပိုပေးရန် */
+    display: flex;
+    justify-content: flex-end; /* ညာဘက်သို့ တွန်းပို့ရန် */
+    gap: 30px;
+}
+
+.contact-info {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--primary-text);
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.contact-header {
+    font-weight: bold;
+    color: var(--primary-text);
+}
+
+.phone-number {
+    color: #22bcb0; /* ဖုန်းနံပါတ်အရောင် */
+    font-weight: bold;
+}
+
+.qr-download-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+.qr-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.qr-caption {
+    font-size: 12px;
+    color: #a0a0a0;
+    /* color: var(--border-color); */
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* --- အောက်ဆုံး မူပိုင်ခွင့် ကဏ္ဍ --- */
+.footer-bottom-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.bottom-divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 10px 0 20px 0;
+}
+
+.copyright-info,
+.authority-info,
+.report-info {
+    font-size: 12px;
+    /* color: #a0a0a0; */
+    color: var(--primary-text);
+    line-height: 1.6;
+    margin: 0 0 5px 0;
+}
+
+.info-link {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
+.authority-icon {
+    margin-right: 5px;
+    font-size: 14px;
+    color: #22bcb0; /* ပုံစံတူစေရန် အရောင်ထည့်ပါ */
+}
+
+.hotline {
+    color: #22bcb0;
+    font-weight: bold;
+}
+
+.commitment-link {
+    color: #22bcb0;
+}
+
+/* တံဆိပ်/Logo များ ကဏ္ဍ */
+.certificate-logos {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-placeholder {
+    width: 50px; /* ပုံထဲကလို အနီးစပ်ဆုံး အရွယ်အစား */
+    height: 50px;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Responsive ပုံစံ */
+@media (max-width: 900px) {
+    .footer-content-wrapper {
+        flex-wrap: wrap;
+    }
+    
+    .footer-column {
+        flex: 1 1 45%; /* ကော်လံ ၂ ခု စီစဉ်ရန် */
+        min-width: auto;
+    }
+
+    .contact-qr-area {
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .column-links-grid {
+        grid-template-columns: 1fr; /* ဖုန်းတွင် ကော်လံတစ်ခုတည်းပြရန် */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* domestic airfare */
+.alert-title {
+    color:var(--primary-text);
+}
+.departure-input input {
+    border: 1px solid var(--border-color);
+    background-color: var(--header-height);
+    color: var(--primary-text);
+}
+.departure-input{
+  color: var(--primary-text);
+}
+.nav-button {
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-category {
+    background-color: var(--cardBg); 
+    box-shadow: 0 2px 8px var(--border-color);
+}
+.card-category h3{
+  color: var(--gold-text);
+}
+.flight-card {
+    border-bottom: 1px solid var(--border-color);
+}
+.card-img-placeholder {
+    background-color: var(--primary-text);
+}
+.flight-info {
+    color: var(--primary-text);
+}
+
+.price-from {
+    color: var(--ctrip-blue);
+}
+
+.flight-date,
+.discount {
+    color: #888;
+}
+.discount {
+    color: var(--ctrip-blue);
+}
+.map-title {
+    color: var(--primary-text);}
+.departure-point {
+    color: var(--primary-text)}
+
+.departure-point input {
+    border: 1px solid var(--border-color);
+    color: var(--primary-text);
+    background-color: var(--headSideBg);
+}
+.destination-list-panel {
+    background-color: var(--headSideBg);
+    box-shadow: 0px 4px 8px var(--border-color) ;
+}
+.destination-list-panel::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);}
+
+.list-title {
+    color: var(--primary-text);
+    background-color: var(--headSideBg);}
+
+.destination-card {
+    border-top: 1px solid var(--border-color);
+}
+.destination-card.active {
+    background-color: #22bcaf2f; /* Active card အတွက် နောက်ခံအရောင် */
+    border-left: 3px solid #22bcb0;
+}
+
+.city-name {
+    color: var(--primary-text);
+}
+
+.more-flights {
+    color: #22bcb0;
+}
+.tag {
+    color: #22bcb0;
+    background-color: var(--footerBg)}
+
+.map-placeholder {
+    background-color: #ffffff;
+    border: 1px solid #ccc;}
+  
+.airline-offers-container {
+    background-color: var(--headSideBg);
+    box-shadow: 0 2px 8px var(--border-color);
+}
+.section-title {
+    color: var(--primary-text);
+}
+.logo-carousel-wrapper {
+    border-bottom: 1px solid var(--border-color);
+}
+.airline-name {
+    color: var(--primary-text);
+}
+.nav-button {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px var(--border-color);
+}
+.detail-header {
+    border-bottom: 1px solid var(--border-color);
+}
+.description-text {
+    color: var(--primary-text);
+}
+.departure-label {
+    color: var(--primary-text);
+}
+.departure-link:hover,
+.departure-link.active {
+    color: var(--ctrip-blue);
+    border-color: var(--ctrip-blue);
+    background-color: var(--headSideBg);
+}
+.offer-card {
+    background-color: var(--headSideBg);
+    box-shadow: 0 2px 6px var(--border-color);}
+
+.route {
+    color: var(--primary-text);}
+
+.service-footer-component {
+    background-color: var(--headSideBg);
+    color: var(--primary-text);
+    box-shadow: 0 2px 6px var(--border-color);}
+
+.service-link {
+    color: var(--primary-text);}
+.separator {
+    color: var(--border-color);
+}
+.divider {
+    border-top: 1px solid var(--border-color);
+}
+.area-title {
+    color: var(--primary-text);}
+.complaint-info-area {
+    color: var(--primary-text);
+}
+.info-value {
+    color: var(--ctrip-blue);
+}
+ #flight-booking-form-container {
+            background-color: var(--headSideBg);
+            box-shadow: 0 0px 8px var(--border-color);}
+.tab {
+            color: var(--primary-text);
+            background-color: #333;
+            border-bottom:1px solid #3333332e;}
+.tab.active {
+            color: var(--primary-text);
+            background-color: white;}
+.form-group {
+            border: 1px solid var(--border-color);}
+.form-group label {
+            color: var(--primary-text);}
+
+
+
+
+
+
+
+
+
+
+
+/* map airfare */
+.mapSection {
+    background-color: var(--headSideBg); /* နောက်ခံအရောင် */   
+    color: var(--primary-text);
+    box-shadow: 0px 2px 8px var(--border-color);}
+.themes-container {
+    border: 1px solid var(--border-color);}
+.theme-tab {
+    flex-shrink: 0; /* ကတ်များ မကျုံ့စေရန် */
+    background-color:white;
+    border: 1px solid #ccc;
+    color: #333;}
+.search-filter-form {
+    background-color: var(--headSideBg);
+  border: 1px solid var(--border-color) ;}
+.dropdown-filters select {
+    border: 1px solid var(--border-color);
+    background-color: var(--headSideBg);
+    color: var(--primary-text);
+}
+.price-slider-bar {
+    background-color: var(--headSideBg);
+    border: 1px solid var(--border-color);
+}
+.input-field {
+    border: 1px solid var(--border-color);}
+
+
+/* flight status */
+ #flight-booking-form-container {
+            background-color: var(--headSideBg);
+            box-shadow: 0 0px 6px var(--border-color);}
+
+  
+/* Airport guide */
+.airport-guide-section {
+    background-color: var(--headSideBg);
+    color: var(--primary-text);}
+.airport-tabs-nav {
+    border-bottom: 1px solid var(--border-color);}
+.airport-tab-button {
+    background:var(--headSideBg);
+    color: var(--primary-text);
+    border-bottom: 3px solid var(--border-color);}
+.airport-tab-button.active {
+    color: var(--gold-text); /* အပြာရောင် */
+    border-bottom-color: var(--ctrip-blue);
+}
+.alphabet-letter {
+    color: var(--ctrip-blue);
+    border-bottom: 1px solid var(--border-color);}
+.airport-column a {
+    color: var(--primary-text);}
+.airport-name {
+    font-weight: bold; /* Bold စာသား */
+     color: #999; }
+.weather-box {
+    background-color: var(--headSideBg);
+    box-shadow: 0 0px 6px var(--border-color);}
+.weather-detail {
+    border-bottom: 1px solid var(--border-color);}
+.weather-detail .label {
+    background-color: var(--ctrip-blue-low);
+    color: var(--ctrip-blue);
+}
+.weather-detail .temp {
+    color: var(--ctrip-blue);
+}
+.weather-detail .condition {
+    color: var(--gold-text);
+}
+
+
+
+/* custom airfare */
+.tab-button.active {
+    background-color: var(--ctrip-blue-dark); 
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid var(--border-color); 
+}
+.tab-button:not(.active):hover {
+    background-color: var(--ctrip-blue-dark);
+}
+.booking-form-container {
+    background-color: var(--ctrip-blue-dark);}
+.trip-row {
+    background-color:var(--ctrip-blue-low);}
+.multi-distance-row {
+    background-color:var(--ctrip-blue-low);
+}
+.deal-card {
+     background-color: var(--ctrip-blue-dark);}
+.route {
+    color:white;}
+.offer-price {
+    color: var(--gold-text); }
+.nav-button1 {
+    background-color:#666;
+    color: black;
+    transition: background-color 0.3s;}
+.nav-button1:hover {
+    background-color: rgb(0, 0, 0);
+}
+.caption-box {
+    background-color: var(--ctrip-blue-dark)}
+.advantage-card:hover .detail-overlay {
+    background-color: #072522f4; }
+.detail-overlay {
+background-color: #072522f4; }
+
+
+
+

@@ -1,0 +1,307 @@
+
+
+
+
+/* heroImage */
+.heroImage{
+    margin-top: 0px; 
+    text-align: center;
+    /* margin-bottom: -84px; */
+    margin-bottom: -149px;
+    position:relative;
+    z-index: 50;
+    top: -80px;
+    margin-left: -50px;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* form */
+ #flight-booking-form-container {
+            max-width: 1200px;
+            margin: 0px auto;
+            margin-top: 10px;
+            /* background-color: #fff; */
+            /* box-shadow: 0 0px 12px rgba(0, 0, 0, 0.195); */
+            border-radius: 14px;
+            padding: 0px 0px;
+            padding-bottom: 0px;
+            margin-bottom: -260px;
+            /* position: absolute; */
+            /* margin-right: 5%; */
+            /* z-index: 60; */
+        }
+
+        .tab-bar {
+            display: flex;
+            border-bottom: 0px solid #eee;
+            margin-bottom: 20px;
+            justify-content: flex-start;
+            border-radius: 0px;
+        }
+
+        .tab {
+            padding: 18px 35px;
+            padding-bottom: 20px;
+            text-align: center;
+            cursor: pointer;
+            width: 25%;
+            margin-bottom: 0px;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+            background-color: #333;
+            position: relative;
+           /* border-radius: 20px; */
+        }
+
+        .tab6 {
+            border-radius: 0px 10px 0px 0px;
+        }
+        .tab1 {
+            border-radius: 10px 0px 0px 0px;
+        }
+
+
+        .tab.active {
+            color: #333;
+            background-color: white;
+            font-weight: 600;
+            /* border-radius: 20px 20px; */
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            /* background-color: #007bff; */
+            /* Active tab underline color */
+        }
+
+        .form-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 1200px;
+            padding: auto 5px;
+            padding-right: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            padding: 10px 15px;
+            flex-grow: 1;
+            /* min-width: auto; */
+            /* max-width: 70%; */
+            margin-top: 5px;
+            margin-bottom: 0px;
+            position: relative;
+            /* For the city selection modal */
+        }
+
+        .form-group:focus-within {
+            border-color: #22bcb0;
+            box-shadow: 0 0 0 0.2rem #1469621e;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            color: #777;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+        }
+
+        .ftext{
+            min-width: 18%;
+            max-width: 18%;
+            border: 0px;
+        }
+
+        .input-display {
+            background: none;
+            border: none;
+            padding: 10px 0 0 0;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            outline: none;
+        }
+
+        /* Radio/Checkbox Group for Trip Type */
+        .trip-type-group {
+            display: flex;
+            gap: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        .trip-type-group label {
+            cursor: pointer;
+        }
+
+        .trip-type-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .search-button {
+            padding: 16px 60px;
+            background-color: #22bcb0;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 0px;
+            box-shadow: 0px 0px 10px #22bcb0;
+            margin-left: 41%;
+            margin-right: 42%;
+
+        }
+
+        .search-button:hover {
+            background-color: #22bcb0;
+        }
+
+        /* City Selection Modal Styles */
+        .city-modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 50px;
+        }
+
+        .city-modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 8px;
+        }
+
+        .city-tabs {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+
+        .city-tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .city-tab.active {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .city-list-container {
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        .city-group {
+            margin-bottom: 15px;
+        }
+
+        .city-group-letter {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .city-item {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .city-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .city-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .city-close:hover,
+        .city-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .form-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-group {
+                width: 100%;
+            }
+        }
+
+
+
+
+
+
+
+/* bodyImage */
+.bodyImage{
+    margin-top: 300px; 
+    text-align: center;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,867 @@
+/* --- Global Styles and Reset --- */
+/* Theme Variables Definition */
+:root {
+    /* --- Light Theme (Default) --- */
+    --bg-color-primary: #fff;
+    --bg-color-secondary: #f5f5f5;
+    --text-color-primary: #333;
+    --text-color-secondary: #666;
+    --border-color-light: #eee;
+    
+    /* Default Color Scheme (Light Orange) */
+    --theme-primary-color: #FFB380; /* Light Orange */
+    --theme-secondary-color: #EDE489; /* Gold border for Jade */
+    --theme-tertiary-color: #C9FEA4; /* Light Jade BG */
+}
+
+/* Light Mode: Orange-Light */
+[data-theme="light"][data-color="orange"] {
+    --theme-primary-color: #FFB380; /* Light Orange */
+    --theme-text-color: #333; /* For text that should be dark on light themes */
+    --theme-secondary-bg: #ffece5; /* Lightened background for secondary items */
+    --theme-border-alt: #ff9966; 
+}
+
+/* Light Mode: Jade-Light */
+[data-theme="light"][data-color="jade"] {
+    --theme-primary-color: #22bcb0; /* Light Jade */
+    --theme-text-color: #333;
+    --theme-secondary-bg: #e5ffe7; 
+    --theme-border-alt: #a8e8b0; 
+}
+
+
+/* --- Dark Theme --- */
+[data-theme="dark"] {
+    --bg-color-primary: #1e1e1e; /* Dark background */
+    --bg-color-secondary: #252526; 
+    --text-color-primary: #fff;
+    --text-color-secondary: #ccc;
+    --border-color-light: #444;
+}
+[data-theme="dark"] body {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+[data-theme="dark"] .scroll-target-box,
+[data-theme="dark"] .normal-flow-section,
+[data-theme="dark"] .booking-form {
+    background-color: var(--bg-color-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .scroll-target-box,
+[data-theme="dark"] .normal-flow-section {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+[data-theme="dark"] .input-group input[type="text"], 
+[data-theme="dark"] .input-group select {
+    color: #fff;
+}
+[data-theme="dark"] .input-group label {
+    color: #aaa;
+}
+[data-theme="dark"] .utility-box,
+[data-theme="dark"] .deal-item,
+[data-theme="dark"] .flight-item {
+    background-color: var(--bg-color-secondary);
+    border-color: var(--border-color-light);
+}
+[data-theme="dark"] .nav-tabs .tab {
+    color: var(--text-color-secondary);
+}
+[data-theme="dark"] .nav-tabs .tab.active {
+    color: var(--theme-primary-color);
+}
+[data-theme="dark"] .nav-tabs .tab.active::after {
+    background-color: var(--theme-primary-color);
+}
+[data-theme="dark"] .dropdown-content {
+    background-color: var(--bg-color-secondary);
+    border-color: var(--border-color-light);
+}
+[data-theme="dark"] .dropdown-content span {
+    color: #ccc;
+}
+[data-theme="dark"] .dropdown-content span:hover {
+    background-color: #333;
+}
+[data-theme="dark"] .copyright-section,
+[data-theme="dark"] .copyright-section p,
+[data-theme="dark"] .nav-section p {
+    color: #999;
+}
+
+
+/* Dark Mode: Orange-Dark */
+[data-theme="dark"][data-color="orange"] {
+    --theme-primary-color: #FF6600; /* Dark Orange */
+    --theme-text-color: #fff;
+    --theme-secondary-bg: #38281e;
+    --theme-border-alt: #ff9966;
+}
+
+/* Dark Mode: Jade-Dark */
+[data-theme="dark"][data-color="jade"] {
+    --theme-primary-color: #11B3A6; /* Dark Jade */
+    --theme-text-color: #fff;
+    --theme-secondary-bg: #223a3a;
+    --theme-border-alt: #00c99a;
+}
+
+
+/* --- THEME-AFFECTED CLASSES (Use CSS Variables) --- */
+/* Background Color (Primary Theme Color) */
+.theme-bg-primary {
+    background-color: var(--theme-primary-color) !important;
+    color: var(--theme-text-color) !important; /* Ensure readable text on theme bg */
+}
+/* Text Color (Primary Theme Color) */
+.theme-text-primary {
+    color: var(--theme-primary-color) !important;
+}
+/* Border Color (Primary Theme Color) - For Jade with Gold/Secondary border */
+.theme-border-primary {
+    border-color: var(--theme-border-alt) !important;
+}
+/* Background Color (Secondary/Lighter Theme Background) */
+.theme-bg-secondary-light {
+    background-color: var(--theme-secondary-bg) !important;
+}
+
+/* Theme-Affected Elements Styles */
+.search-btn {
+    background-color: var(--theme-primary-color);
+    color: white;
+    border: 1px solid var(--theme-primary-color);
+}
+.safety-badges span {
+    color: var(--theme-primary-color);
+}
+.utility-box i, .utility-box h4 {
+    color: var(--theme-primary-color);
+}
+.carousel-list-footer {
+    background-color: var(--theme-primary-color);
+    color: white;
+}
+.ctrip-business-banner {
+    background-color: var(--theme-primary-color); /* Theme color for kimberley Group banner */
+}
+.ctrip-business-banner[data-theme="dark"] {
+    background-color: var(--theme-primary-color);
+}
+.business-banner {
+    background-color: #ff6600; /* Ctrip Business Banner (Always Red/Orange) */
+}
+.security-item i {
+    color: var(--theme-primary-color);
+}
+
+
+/* --- Theme Switcher Styling (New) --- */
+.theme-switcher-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--bg-color-primary); 
+    border-radius: 8px;
+    margin-bottom: 10px; /* Hefei Hotel Box/Carousel ကို နည်းနည်းအောက်ပို့လိုက်သည် */
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#mode-toggle-btn {
+    background-color: var(--theme-primary-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+#mode-toggle-btn i {
+    font-size: 1.1em;
+}
+
+.color-options {
+    display: flex;
+    gap: 8px;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+.color-option.orange {
+    background-color: #FFB380;
+}
+.color-option.jade {
+    background-color: #C9FEF4;
+}
+
+/* Active color scheme highlight */
+.color-option.active {
+    border-color: #0086F6; /* Blue ring to indicate active color */
+    box-shadow: 0 0 0 2px #fff;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-primary);
+    line-height: 1.6;
+}
+.page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- 1. MAIN CONTENT FLEX CONTAINER (Scroll Box & Carousel) --- */
+.main-content-flex {
+    display: flex;
+    gap: 20px;
+    margin-top: -40px;
+    padding: 0 20px 20px 20px; 
+}
+
+/* *** 1.1. LEFT COLUMN: LIMITED SCROLLABLE CONTENT *** */
+.scroll-target-box {
+    flex: 2; 
+    background-color: var(--bg-color-primary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-height: 700px; 
+    overflow-y: auto; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Section 1: Book a Hotel (Styling) --- */
+.book-hotel-section {padding-bottom: 20px; border-bottom: 1px solid var(--border-color-light);}
+
+/* --- HEADER STYLING (ပုံအတိုင်း ပြင်ဆင်) --- */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.form-title {
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+.safety-badges {
+    display: flex;
+    gap: 15px;
+}
+.safety-badges span {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.safety-badges i {
+    margin-right: 3px;
+}
+
+/* --- BOOKING FORM STYLING (ပုံအတိုင်း ပြင်ဆင်) --- */
+.booking-form {
+    background-color: var(--bg-color-primary); 
+    border: 1px solid var(--border-color-light); 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+}
+
+.input-row {
+    display: flex;
+    gap: 0; 
+    margin-bottom: 10px;
+    height: 60px; 
+}
+
+/* ပထမတန်း ဘောင်ပုံစံချခြင်း */
+.top-row-combined {
+    border: 1px solid var(--border-color-light); 
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+/* ဒုတိယတန်း ပုံစံချခြင်း */
+.bottom-row-combined {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    height: auto;
+}
+
+.input-group {
+    flex-grow: 1;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100px;
+}
+
+/* ပထမတန်း Input Group အချင်းချင်း ခြားရန် */
+.top-row-combined .input-group {
+    border-right: 1px solid var(--border-color-light); 
+}
+.top-row-combined .input-group:last-of-type {
+    border-right: none;
+}
+.top-row-combined .destination-hotel-name {
+    flex: 2; 
+    min-width: 150px;
+}
+
+
+/* ဒုတိယတန်း Input Group ၃ ခုကို ဘောင်တစ်ခုတည်းနဲ့ ထိန်းရန် */
+.bottom-row-combined .input-group {
+    border-top: 1px solid var(--border-color-light);
+    border-bottom: 1px solid var(--border-color-light);
+    border-right: 1px solid var(--border-color-light);
+    flex: 1;
+}
+.bottom-row-combined > .input-group:nth-child(1) {
+    border-left: 1px solid var(--border-color-light); 
+    border-radius: 6px 0 0 6px; 
+}
+.bottom-row-combined > .input-group:nth-child(3) {
+    border-right: none; 
+}
+
+/* Label နဲ့ Input တွေရဲ့ ပုံစံ */
+.input-group label {
+    font-size: 0.75em;
+    color: var(--text-color-secondary);
+    margin-bottom: 2px;
+}
+
+.input-group input[type="text"], 
+.input-group select {
+    border: none;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-color-primary);
+    background: transparent;
+    width: 100%;
+    outline: none;
+}
+.input-group select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+
+/* Search Button (ပုံထဲကလို ညာဘက်အဆုံးမှာ အပြာရောင် box) */
+.search-btn {
+    height: 60px; 
+    width: 120px; 
+    border-radius: 0 6px 6px 0; 
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0; 
+    align-self: center; 
+}
+
+/* Business Banner Styling (မူရင်းအတိုင်း) */
+.business-banner {background-color: #ff6600; /* Orange/Red-Orange (Always Red) */ color: white; padding: 10px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center;}
+
+/* --- UTILITY BUTTONS STYLING (ပြင်ဆင်ထားသည်) --- */
+
+.utility-buttons {
+    display: flex;
+    gap: 10px; 
+    margin-top: 15px; 
+}
+
+.utility-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 6px; 
+    border: 1px solid var(--border-color-light); 
+    background-color: var(--bg-color-primary); 
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.utility-box i {
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+.utility-box .utility-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.utility-box h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.utility-box p {
+    font-size: 0.8em;
+    margin: 2px 0 0 0;
+    color: var(--text-color-secondary);
+}
+
+.utility-box .fa-chevron-right {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-left: 10px;
+}
+
+
+/* --- HOTEL RECOMMENDATIONS TAB STYLING (ပြင်ဆင်ထားသည်) --- */
+
+.hotel-recommendations-section {margin-top: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color-light);}
+
+.hotel-recommendations-section h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    position: relative; 
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.nav-tabs .tab {
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--text-color-secondary);
+    cursor: pointer;
+    padding-bottom: 5px;
+    position: relative;
+    white-space: nowrap;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.nav-tabs .tab.active {
+    font-weight: bold;
+    color: var(--theme-primary-color);
+}
+
+.nav-tabs .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--theme-primary-color); 
+}
+
+/* More Dropdown Menu Style */
+.more-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0; 
+    width: 550px; 
+    background-color: var(--bg-color-primary);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(222, 216, 216, 0.1);
+    z-index: 100;
+    padding: 10px;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.more-dropdown:hover .dropdown-content,
+.more-dropdown.show .dropdown-content { 
+    display: grid; 
+}
+
+.dropdown-content span {
+    font-size: 0.95em;
+    color: var(--text-color-primary);
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+.dropdown-content span:hover {
+    background-color: var(--bg-color-secondary);
+}
+
+
+/* --- HOTEL CARD STYLING (ထိန်းသိမ်းထားသည်) --- */
+.hotel-list {
+    display: flex; 
+    gap: 20px; 
+    overflow-x: scroll; 
+    padding-bottom: 10px;
+    flex-wrap: nowrap; 
+}
+.hotel-card {
+    min-width: 180px; 
+    border: 1px solid var(--border-color-light); 
+    border-radius: 6px; 
+    padding: 10px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color-primary);
+}
+.hotel-card img {
+    width: 100%; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    margin-bottom: 5px;
+}
+.hotel-card h3 {font-size: 1em; margin: 0 0 5px 0; color: var(--text-color-primary);}
+.hotel-card .price {color: #ff6600; font-weight: bold; font-size: 1.1em;}
+.hotel-card .rating-detail, .reviews {font-size: 0.8em; color: var(--text-color-secondary);}
+.hotel-card .rating-stars {color: gold;} /* ကြယ်များအတွက် */
+
+
+/* --- Section 3: Hot Deals & Flights (Styling) --- */
+.hot-deals-and-flights-section {margin-top: 20px;}
+.seasonal-hot-push-container {display: flex; gap: 20px;}
+.seasonal-selling-tours, .weekend-flights-container {flex: 1;}
+
+.deal-item, .flight-item {
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid var(--border-color-light); 
+    padding: 8px; 
+    border-radius: 4px;
+    background-color: var(--bg-color-primary);
+}
+.deal-item img, .flight-item img {width: 60px; height: 60px; object-fit: cover; border-radius: 4px;}
+.deal-text, .flight-text {flex: 1; position: relative;}
+.deal-text h4, .flight-text h4 {margin: 0; font-size: 0.9em; line-height: 1.2; color: var(--text-color-primary);}
+.sub-detail, .flight-detail, .flight-dates {font-size: 0.75em; color: var(--text-color-secondary); margin: 2px 0;}
+.deal-item .price, .flight-item .price {color: #ff6600; font-weight: bold; position: absolute; right: 0; top: 0;}
+
+
+/* *** 1.2. RIGHT COLUMN: STICKY CAROUSEL AD BOX *** */
+.sticky-carousel-container {
+    flex: 1; 
+    max-width: 350px;
+    position: sticky; 
+    top: 20px; 
+    align-self: flex-start;
+    height: fit-content;
+}
+
+.ad-carousel-wrapper {
+    width: 100%; 
+    height: 500px; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+/* Carousel Slides Styling */
+.carousel-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Title Box (Upper left corner) */
+.carousel-title-box {
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+.carousel-title-box p:first-child {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Hotel Overlay List (Upper right corner) */
+.hotel-overlay-list {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    color: white;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 10px;
+    border-radius: 4px;
+}
+.overlay-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.8em;
+}
+.overlay-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    object-fit: cover;
+    border: 1px solid white;
+}
+.overlay-item p {
+    margin: 0;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.overlay-item .price {
+    font-weight: bold;
+    color: #ffc107; 
+}
+
+/* Carousel List Footer (Bottom center) */
+.carousel-list-footer {
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 20px;
+    align-self: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Carousel Indicators (Dots at the bottom) */
+.carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 10px 0;
+}
+.indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.indicator.active {
+    background-color: white;
+}
+
+/* Ctrip Business Banner below Carousel */
+.ctrip-business-banner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+}
+.ctrip-business-banner img {height: 25px; margin-right: 10px;}
+
+
+/* --- 2. NORMAL FLOW SECTIONS (Below Scrollable Area) --- */
+.normal-flow-section {
+    padding: 20px;
+    background-color: var(--bg-color-primary);
+    margin: 0 20px 20px 20px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Section 4: Business Travel & Security Styling --- */
+.business-services {display: flex; gap: 20px; margin-bottom: 30px;}
+.service-box {
+    flex: 1; 
+    padding: 15px; 
+    border-radius: 6px; 
+    border: 1px solid var(--border-color-light);
+    background-color: var(--bg-color-secondary);
+}
+.service-box i {
+    font-size: 1.5em; 
+    margin-bottom: 10px;
+}
+.service-box h4 {
+    color: var(--text-color-primary);
+}
+.service-box p {
+    color: var(--text-color-secondary);
+}
+
+.travel-security {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.security-item {
+    padding: 10px; 
+    border: 1px solid var(--border-color-light); 
+    border-radius: 4px;
+    background-color: var(--bg-color-secondary); 
+}
+.security-item i {
+    font-size: 1.2em; 
+    margin-right: 5px;
+}
+.security-item h4 {
+    font-size: 0.9em; 
+    margin: 5px 0 2px 0;
+}
+.security-item p {
+    font-size: 0.75em; 
+    color: var(--text-color-secondary);
+}
+
+.partnerships-banners {display: flex; justify-content: space-between; gap: 10px;}
+.banner-item {
+    flex: 1; 
+    height: 60px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 4px;
+    border: 1px solid var(--border-color-light);
+}
+.banner-item p {
+    color: var(--text-color-primary);
+}
+
+
+/* --- Section 5: Footer Styling --- */
+.main-footer-links {border-radius: 0 0 8px 8px;}
+.main-partners {display: flex; gap: 20px; margin-bottom: 30px;}
+.main-partners img {height: 25px; opacity: 0.7;}
+
+.footer-navigation-detailed {display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px; border-top: 1px solid var(--border-color-light); padding-top: 20px;}
+.nav-section {
+    flex: 1 1 200px; 
+    min-width: 180px;
+}
+.contact-qr {
+    flex: 1 1 250px; 
+    display: flex;
+    flex-direction: column;
+}
+.contact-qr img {width: 100px; height: 100px; margin-top: 10px; border: 1px solid var(--border-color-light);}
+.nav-section h3 {font-size: 1em; margin-top: 0; margin-bottom: 10px; color: var(--text-color-primary);}
+.nav-section p {font-size: 0.8em; line-height: 1.8; color: var(--text-color-secondary);}
+
+.copyright-section {border-top: 1px solid var(--border-color-light); padding-top: 15px; font-size: 0.75em; color: var(--text-color-secondary); text-align: center;}
+
+/* Responsive adjustments (မူရင်းအတိုင်း ထားရှိသည်) */
+@media (max-width: 1200px) {
+    .main-content-flex {
+        flex-direction: column;
+    }
+    .sticky-carousel-container {
+        position: static;
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .travel-security {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .input-row {
+        flex-direction: column;
+        height: auto;
+    }
+    .top-row-combined {
+        border: none;
+        border-radius: 0;
+    }
+    .top-row-combined .input-group {
+        border: 1px solid var(--border-color-light);
+        border-radius: 6px;
+        margin-bottom: 10px;
+        border-right: 1px solid var(--border-color-light);
+    }
+    .top-row-combined .input-group:last-of-type {
+        border-right: 1px solid var(--border-color-light);
+    }
+    .bottom-row-combined {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .bottom-row-combined .input-group {
+        border: 1px solid var(--border-color-light);
+        border-radius: 6px;
+        margin-bottom: 0;
+    }
+    .bottom-row-combined > .input-group:nth-child(1),
+    .bottom-row-combined > .input-group:nth-child(3) {
+        border-radius: 6px; 
+    }
+    .search-btn {
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+    .utility-buttons {
+        flex-direction: column;
+    }
+    .seasonal-hot-push-container {
+        flex-direction: column;
+    }
+}
+

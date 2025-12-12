@@ -1,0 +1,236 @@
+
+
+
+
+
+
+
+
+
+
+/* guide */
+/* Section Container */
+.airport-guide-section {
+    width: 100%;
+    /* နောက်ခံအရောင် (ပုံထဲကလို အဖြူ/ခဲဖျော့) */
+    /* background-color: #f8f8f8;  */
+    padding: 30px 0 50px 0;
+    font-family: Arial, sans-serif;
+    /* color: #333; */
+    margin-top: -50px;
+}
+
+.airport-guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0px;
+    /* padding-left: -180px; */
+}
+
+/* Left Content: Airport List */
+.airport-list-wrapper {
+    flex-grow: 1;
+    max-width: 75%; /* ညာဘက် sidebar အတွက် နေရာချန်ရန် */
+}
+
+.airport-list-wrapper h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Tabs Navigation */
+.airport-tabs-nav {
+    display: flex;
+    /* border-bottom: 1px solid #ccc; */
+    margin-bottom: 20px;
+}
+
+.airport-tab-button {
+    /* background: transparent; */
+    border: none;
+    /* color: #333; */
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    /* border-bottom: 3px solid transparent; */
+    transition: border-color 0.3s;
+    margin-right: 15px;
+}
+
+.airport-tab-button.active {
+    /* color: #22bcb0; အပြာရောင် */
+    /* border-bottom-color: #22bcb0; */
+    font-weight: bold;
+}
+
+/* Tab Content */
+.airport-tab-content {
+    display: none;
+}
+
+.airport-tab-content.active {
+    display: block;
+}
+
+/* Alphabetical Grouping */
+.alphabet-group {
+    margin-bottom: 20px;
+}
+
+.alphabet-letter {
+    font-size: 16px;
+    font-weight: bold;
+    /* color: #22bcb0; အပြာရောင် */
+    /* border-bottom: 1px solid #eee; */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.airport-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ၄ ကော်လံ */
+    gap: 10px 20px;
+}
+
+.airport-column {
+    /* ၄ ကော်လံ အတွက် စာရင်းစတိုင် */
+    display: flex;
+    flex-wrap: wrap; 
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.airport-name {
+    font-weight: bold; /* Bold စာသား */
+    /* color: #333; */
+    margin-right: 5px;
+}
+
+.airport-column a {
+    /* color: #999; Link စာသားကို မှိန်စေရန် */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.airport-column a:hover {
+    color: #22bcb0;
+}
+
+/* Right Content: Sidebar */
+.right-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    margin-left: 30px;
+}
+
+/* Boarding Procedures Box */
+.boarding-box {
+    background-color:#22bcb0; /* အပြာရောင် နောက်ခံ */
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.boarding-box a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.boarding-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    /* ဤနေရာတွင် ပုံအစား Icon ထည့်သွင်းထားသည် */
+}
+
+.boarding-box span {
+    font-size: 16px;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.arrow-icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Weather Box */
+.weather-box {
+    /* background-color: white; */
+    padding: 15px;
+    border-radius: 4px;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+
+.city-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.weather-detail {
+    padding: 10px 0;
+    /* border-bottom: 1px solid #eee; */
+}
+
+.weather-detail:last-child {
+    border-bottom: none;
+}
+
+.weather-detail p {
+    margin: 3px 0;
+}
+
+.weather-detail .label {
+    /* background-color: #f0f0f0; */
+    /* color: #666; */
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.weather-detail .temp {
+    font-size: 18px;
+    font-weight: bold;
+    /* color: #333; */
+}
+
+.weather-detail .condition {
+    font-size: 14px;
+    /* color: #666; */
+}
+
+/* Responsive ချိန်ညှိခြင်း */
+@media (max-width: 992px) {
+    .airport-guide-container {
+        flex-direction: column;
+    }
+    
+    .airport-list-wrapper {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .right-sidebar {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .airport-list-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .airport-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

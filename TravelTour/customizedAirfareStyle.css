@@ -1,0 +1,1830 @@
+
+
+
+
+
+
+
+
+
+/* hero */
+/* Hero Section Container (Full Screen) */
+.hero-section {
+    position: relative;
+    width: 100%;
+    /* Landscape အပြည့်ယူရန် */
+    height: 100vh; 
+    overflow: hidden;
+    background-color: #000; /* Video မပေါ်မီ နောက်ခံအရောင် */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+/* Video Background ပုံစံ */
+.background-video-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    /* ပုံထဲကလို မှောင်နေစေရန် Overlay effect */
+    filter: brightness(30%); 
+}
+
+/* အလယ်က စာသားများ */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 5vw; /* မျက်နှာပြင် အရွယ်အစားအလိုက် ကြီးစေရန် */
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sub-title {
+    font-size: 1.5vw; /* ပုံထဲကလို စာသားသေးသေးလေး */
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/* --- Customer Service Consultation (Floating) --- */
+.customer-service-container {
+    position: fixed; /* အမြဲရှိနေရန် */
+    right: 30px;
+    bottom: 50px;
+    z-index: 100; /* အပေါ်ဆုံးရောက်နေစေရန် */
+}
+
+/* ခလုတ် ပုံစံ (ရွှေရောင်) */
+.customer-service-button {
+    display: flex;
+    align-items: center;
+    background-color: #dab777; /* ရွှေရောင်နှင့် နီးစပ်သောအရောင် */
+    color: rgba(0, 0, 0, 0.547);
+    padding: 8px 15px;
+    border-radius: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s;
+    font-size: 14px;
+}
+
+.customer-service-button:hover {
+    background-color: #c9a565;
+}
+
+.service-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+    background-color: white; /* မျက်နှာပုံစံအတွက် */
+}
+
+/* Popup ပုံစံ (Hover လုပ်ရင် ပေါ်လာမယ့် QR Box) */
+.customer-service-popup {
+    position: absolute;
+    bottom: 100%; /* ခလုတ်ရဲ့ အပေါ်မှာ ပေါ်စေရန် */
+    right: 0;
+    width: 200px; /* Popup အကျယ် */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* စတင်ချိန်တွင် ဖျောက်ထားရန် */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+/* Hover လုပ်ရင် ပေါ်စေရန် */
+.customer-service-container:hover .customer-service-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.popup-header {
+    background-color: #dab777; /* ရွှေရောင် အပေါ်ပိုင်း */
+    color: rgba(0, 0, 0, 0.547);
+    text-align: center;
+    padding: 8px 0;
+}
+
+.vip-line-label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.vip-phone-number {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.qr-code-box {
+    padding: 15px;
+    text-align: center;
+}
+
+.qr-code-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background-color: #f0f0f0; /* ပုံမရှိပါက နေရာယူရန် */
+    margin-bottom: 5px;
+}
+
+.qr-caption {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+}
+
+/* ဖုန်းဖြင့်ကြည့်လျှင် စာသားအရွယ်အစား ချိန်ညှိခြင်း */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 8vw;
+    }
+
+    .sub-title {
+        font-size: 3vw;
+    }
+}
+
+
+/*admin test*/
+.qr-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto; /* Center the QR code */
+}
+
+.qr-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.camera-overlay {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0,0,0,0.6);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.camera-overlay i {
+    color: #fff;
+}
+
+.editable-text[contenteditable="true"] {
+    outline: 2px dashed orange;
+    padding: 2px 4px;
+}
+
+/* Edit Icon */
+.cs-edit-btn {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: white;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 200;
+    display: none;
+}
+
+.customer-service-container.editing .cs-edit-btn {
+    display: block;
+}
+
+/* Camera Upload Icons */
+.avatar-upload-icon,
+.qr-upload-icon {
+    position: absolute;
+    background: rgba(255,255,255,0.9);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.customer-service-container.editing .avatar-upload-icon,
+.customer-service-container.editing .qr-upload-icon {
+    display: flex;
+}
+
+/* Avatar camera position */
+.avatar-upload-icon {
+    top: 5px;
+    left: 5px;
+}
+
+/* QR camera position */
+.qr-upload-icon {
+    top: 10px;
+    right: 10px;
+}
+
+/* Editable text highlight */
+.editable-text[contenteditable="true"] {
+    outline: 2px dashed #388bff;
+    background: rgba(255,255,255,0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .qr-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .camera-overlay {
+        width: 34px;
+        height: 34px;
+        bottom: 6px;
+        right: 6px;
+    }
+    
+    .avatar-upload-icon,
+    .qr-upload-icon {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .cs-edit-btn {
+        top: -12px;
+        left: -12px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .camera-overlay {
+        width: 32px;
+        height: 32px;
+        bottom: 5px;
+        right: 5px;
+    }
+    
+    .avatar-upload-icon,
+    .qr-upload-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .cs-edit-btn {
+        top: -10px;
+        left: -10px;
+        padding: 4px;
+    }
+    
+    .editable-text[contenteditable="true"] {
+        padding: 1px 3px;
+    }
+}
+
+/* Additional responsive adjustments for the popup container */
+@media (max-width: 768px) {
+    .customer-service-popup {
+        width: 280px;
+        right: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .customer-service-popup {
+        width: 260px;
+        right: -15px;
+        padding: 15px;
+    }
+    
+    .customer-service-container {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* banner */
+/* Container အခြေခံ ပုံစံ */
+.charter-banner-section {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    /* background-color: #fff; */
+}
+
+/* --- ၁။ Banner Area --- */
+.charter-banner-area {
+    /* background-color: #0c1a32; ပုံထဲက နက်ပြာရောင် နောက်ခံ */
+    padding: 50px 0;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.banner-background-placeholder {
+    /* နောက်ခံပုံအတွက် နေရာ (ပုံထဲက အရိပ်အဆာတွေ) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* နောက်ခံပုံ မရှိရင်တောင် အပေါ်က စာသားတွေ မြင်ရအောင် filter သုံးနိုင်ပါတယ် */
+    min-height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.charter-logo {
+    width: 100%; /* Logo အရွယ်အစား ချိန်ညှိပါ */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.service-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.service-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 5px 0 5px 0;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.service-slogans {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.slogan-item {
+    font-weight: normal;
+}
+
+.slogan-separator {
+    color: #4a5d7c; /* မီးခိုးရောင်ခပ်ပျော့ပျော့ */
+}
+
+
+/* --- ၂။ အောက်ခြေ အချက်အလက် ကဏ္ဍ --- */
+.charter-info-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* border-top: 1px solid #eee; */
+    font-size: 13px;
+    color: #ffffff;
+}
+
+/* VIP Line (ဘယ်ဘက်) */
+.charter-vip-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-icon {
+    font-size: 24px;
+    color: #22bcb0; /* ခဲရောင်ဖျော့ဖျော့ သို့မဟုတ် အပြာရောင် */
+}
+
+.vip-label {
+    margin: 0;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.vip-number {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+      color: #ffffff;
+}
+
+/* NBAA Logo (အလယ်) */
+.nbaa-member-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-label {
+    font-size: 10px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.nbaa-member-logo .logo-placeholder {
+    width: 80px;
+    height: 30px;
+    background-color: #e6e6e6; /* ပုံမရှိပါက နေရာယူရန် */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* QR Codes Section (ညာဘက်) */
+.qr-codes-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.qr-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qr-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.qr-text {
+    line-height: 1.3;
+}
+
+.qr-title {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.qr-description {
+    margin: 0;
+    font-size: 11px;
+      color: #ffffff;
+}
+
+/* Responsive ပုံစံ */
+@media (max-width: 900px) {
+    .charter-banner-area {
+        padding: 30px 0;
+    }
+    
+    .charter-info-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .qr-codes-section {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .nbaa-member-logo {
+        /* Mobile တွင် အလယ်မှ ဘယ်သို့ ရွှေ့ရန် */
+        align-self: flex-start;
+    }
+}
+
+.edit-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.upload-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.8);
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 20;
+}
+
+.hero-media-container,
+.banner-section {
+    position: relative;
+}
+
+.editing .upload-icon {
+    display: flex;
+}
+
+.editable-text[contenteditable="true"] {
+    outline: 2px dashed #007bff;
+    background: rgba(255,255,255,0.6);
+}
+
+
+
+
+/* form */
+/* Container ချိန်ညှိခြင်း */
+.charter-booking-section {
+    width: 96%;
+    /* ပုံထဲကလို အပြာရင့်ရောင် နောက်ခံ */
+    /* background-color: #0d1b322c;  */
+    padding: 0 0 0px 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-top: -42px;
+    position:absolute;
+    z-index: 200;
+   
+}
+
+/* Tab Navigation (အလယ်တည့်တည့်) */
+.booking-tabs {
+    display: flex;
+    justify-content: center; /* အလယ်တည့်တည့် ထားရန် */
+    /* max-width: 385px; */
+    width: auto;
+    margin: 0 auto;
+    margin-left: -30px;
+    /* background-color: #000000b2; */
+    /* border-radius: 8px 8px 0 0; */
+    transform: translateY(1px); /* Form အစွန်းပေါ် နည်းနည်းထပ်နေစေရန် */
+}
+
+.tab-button {
+    border: 1px solid white;
+    border-bottom: 0px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    /* background-color: #0d1b32; Form နောက်ခံအရောင် */
+    /* color: white; */
+    font-weight: bold;
+    /* border-bottom: 2px solid #fff; Active အောက်ခံ မျဉ်းဖြူ */
+}
+
+/* .tab-button:not(.active):hover {
+    background-color: #2a3a57;
+} */
+
+/* Form Container */
+.booking-form-container {
+    max-width: 1200px; /* Form ရဲ့ အကျယ် */
+    margin: 0 auto;
+    /* background-color: #0d1b32; */
+    padding: 20px 40px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* --- Trip Row (Main Layout) --- */
+.trip-row {
+    display: flex;
+    align-items: stretch;
+    /* background-color: #21304d; Input row ရဲ့ နောက်ခံ */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+/* Multi-distance အတွက် */
+.multi-distance-row {
+    /* background-color: #103c3930; */
+    padding: 10px 5px;
+}
+
+/* Input Field Style */
+.input-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    position: relative;
+    border-right: 1px solid #22bcb0; /* Field ခြားမျဉ်း */
+}
+
+/* နောက်ဆုံး input-field မှာ မျဉ်းဖျောက်ရန် */
+.trip-row .input-field:last-of-type {
+    border-right: none;
+}
+
+.input-field label {
+    font-size: 12px;
+    color: #99a8c7;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.input-field input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 1px 0;
+    width: 160px;
+}
+.input-field input::placeholder {
+    color: #99a8c7;
+    opacity: 0.6;
+}
+
+/* Swap Icon */
+.input-swap {
+    font-size: 16px;
+    color: #99a8c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+/* Remove Button (Multi-distance) */
+.remove-trip-button {
+    background: transparent;
+    border: none;
+    color: #99a8c7;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.remove-trip-button:hover {
+    color: #22bcb0;
+}
+.remove-trip-button.hidden {
+    visibility: hidden;
+}
+
+
+/* --- Date Picker Placeholder --- */
+.date-input-field {
+    position: relative;
+    cursor: pointer;
+}
+
+.calendar-placeholder {
+    position: absolute;
+    top: 100%; /* input အောက်နားတွင် ပေါ်စေရန် */
+    left: 0;
+    background-color: white;
+    color: #333;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 50;
+    display: none; /* JS ဖြင့် နှိပ်လျှင် ပေါ်လာမည် */
+    text-align: center;
+}
+.date-input-field:focus-within .calendar-placeholder,
+.date-input-field.active .calendar-placeholder {
+    display: block;
+}
+.calendar-placeholder p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 12px;
+}
+.calendar-grid p {
+    padding: 5px;
+    cursor: pointer;
+}
+.calendar-grid .now {
+    background-color: #22bcb0;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Submit Button (Gold) */
+.submit-button {
+    flex-shrink: 0;
+    width: 200px;
+    background: linear-gradient(to right, #e8c687, #c9a565); /* ရွှေရောင် Gradient */
+    color: #333;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 15px;
+}
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+/* One Way Specific */
+.one-way-row {
+    padding: 0;
+}
+.one-way-row .input-field {
+    padding: 10px 5px;
+}
+.one-way-row .travelers-field {
+    flex: 0 0 150px; /* Number of travelers ကို ကျဉ်းရန် */
+}
+
+
+/* Round Trip Specific */
+.round-trip-row {
+    padding: 5px;
+}
+.round-trip-row .input-field {
+    padding: 5px 0px;
+    padding-left: 5px;
+}
+.round-trip-row .travelers-field {
+    flex: 0 0 150px;
+}
+.round-trip-row .full-width {
+    width: 100%;
+}
+/* Multi-distance Specific */
+.multi-distance-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-trip-button {
+    background: transparent;
+    color: #dab777; /* ရွှေရောင်စာသား */
+    border: 1px solid #dab777;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.travelers-submit-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.multi-distance-footer .travelers-field {
+    border-right: none;
+}
+.multi-distance-footer .submit-button {
+    width: 200px;
+}
+
+
+/* Responsive ချိန်ညှိခြင်း */
+@media (max-width: 1000px) {
+    .trip-row {
+        flex-wrap: wrap;
+    }
+    .input-field {
+        flex-basis: calc(50% - 20px);
+        margin-bottom: 10px;
+    }
+    .input-swap, .remove-trip-button {
+        display: none;
+    }
+    .trip-row .input-field:last-of-type {
+        border-right: 1px solid #3d4a67;
+    }
+    .submit-button {
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+    .one-way-row .travelers-field,
+    .round-trip-row .travelers-field {
+        flex: 1;
+    }
+    .round-trip-row .input-field:nth-child(4) {
+        border-right: none;
+    }
+}
+
+
+
+
+/* special today */
+/* Container အခြေခံ ပုံစံ */
+.special-section {
+    width: 100%;
+    /* background-color: #0c1a32; နောက်ခံအရောင် */
+    padding: 40px 0 60px;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-top: 170px;
+    
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    text-align: center;
+    color: #dab777; /* ရွှေရောင်ခပ်ဖျော့ဖျော့ */
+    margin-bottom: 30px;
+}
+
+/* Header ပုံနှင့် စာသားများ */
+.header-image-box {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    position: relative;
+    height: 250px; /* ပုံ၏ အမြင့် */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* ပုံထဲကလို မှိန်နေအောင် ချိန်ညှိနိုင်သည် */
+    filter: brightness(60%);
+}
+
+.header-text-overlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.overlay-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.overlay-subtitle {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+/* Edit button styles for Special Today section */
+.deal-card {
+    position: relative;
+}
+
+.edit-card-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.deal-card:hover .edit-card-btn {
+    opacity: 1;
+}
+
+.edit-card-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.save-card-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #1a73e8;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.edit-input.price {
+    font-weight: bold;
+}
+/* Deals Carousel Wrapper */
+.deals-carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 50px; /* ခလုတ်များအတွက် နေရာချန်ရန် */
+    overflow: hidden;
+}
+
+.deals-container {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Deal Card Set (၈ ကတ် တစ်မျက်နှာ) */
+.deal-card-set {
+    flex: 0 0 100%; /* တစ်မျက်နှာစာ အပြည့်ယူရန် */
+    display: grid;
+    /* ၄ ကော်လံ နှင့် ၂ တန်း */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%; /* အရေးကြီးသည် */
+    padding: 10px 0;
+}
+
+/* Deal Card တစ်ခုချင်းစီ */
+.deal-card {
+    /* background-color: #1a2a47; ကတ် နောက်ခံ အရောင် */
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* edit icon (black) admin edit  */
+.edit-card-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    z-index: 10;
+    color: #000; /* black icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* save button (subtle) */
+.save-card-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #1a73e8;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 0;
+}
+
+/* inputs that look like inline text so layout doesn't break */
+.deal-card .edit-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 0 6px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* give price inputs some visual hint when editing */
+.deal-card .edit-input.price {
+    font-weight: 700;
+}
+
+/* keep card positioning */
+.deal-card { position: relative; }
+
+.route {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    /* color:#c9a565; */
+}
+
+.date, .aircraft, .market-price {
+    font-size: 12px;
+    color: #99a8c7; /* ခဲရောင်ဖျော့ဖျော့ */
+    margin: 0;
+    line-height: 1.4;
+}
+
+.market-price {
+    text-decoration: line-through; /* ဈေးနှုန်းကို မျဉ်းတားရန် */
+    margin-top: 5px;
+}
+
+.offer-price {
+    font-size: 24px;
+    font-weight: bold;
+    /* color: #22bcb0; လိမ္မော်ရောင်ခပ်ရဲရဲ */
+    margin: 10px 0 0 0;
+}
+
+/* Carousel ခလုတ်များ (CSS အဟောင်းမှ ယူထားပါသည်) */
+.nav-button1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    /* background-color: rgb(0, 0, 0); */
+    /* color: rgb(0, 0, 0); */
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 20;
+    /* transition: background-color 0.3s; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* .nav-button:hover {
+    /* background-color: rgba(0, 0, 0, 0.925); 
+} */
+
+.prev-deal-button {
+    left: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFFFFF" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.next-deal-button {
+    right: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFFFFF" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-button:disabled {
+    opacity: 0; /* မရှိသည့်အခါ ဖျောက်ထားပါ */
+    cursor: default;
+}
+
+/* Responsive ပုံစံ */
+@media (max-width: 1200px) {
+    .deal-card-set {
+        grid-template-columns: repeat(3, 1fr); /* ၃ ကော်လံ */
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .deal-card-set {
+        grid-template-columns: repeat(2, 1fr); /* ၂ ကော်လံ */
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .deals-carousel-wrapper {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .deal-card-set {
+        grid-template-columns: 1fr; /* ၁ ကော်လံ */
+        grid-template-rows: auto;
+    }
+}
+
+
+
+
+
+
+/* advantages */
+/* Container အခြေခံ ပုံစံ */
+.advantages-section {
+    width: 100%;
+    /* background-color: #0c1a32;  */
+    padding: 40px 0 60px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Carousel Wrapper */
+.advantage-carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 50px; /* ခလုတ်များအတွက် နေရာချန်ရန် */
+    overflow: hidden;
+}
+
+.advantage-cards-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Card တစ်ခုချင်းစီ ပုံစံ */
+.advantage-card {
+    flex: 0 0 calc(25% - 15px); /* ၄ ခုစီ ပြရန် */
+    max-width: calc(25% - 15px);
+    overflow: hidden;
+    border-radius: 4px;
+    /* background-color: #1a2a47; Hover မလုပ်မီ အနောက်က အရောင် */
+    opacity: 1; /* ပုံမှန်အားဖြင့် ထင်ရှားနေရန် */
+    transition: opacity 0.3s;
+}
+
+/* ပုံနှင့် Hover Effect အတွက် နေရာ */
+.image-box {
+    position: relative;
+    width: 100%;
+    height: 180px; /* ပုံရဲ့ အမြင့် */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.advantage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Detail Overlay (Hover လုပ်ရင် ပေါ်မယ့် အသေးစိတ် ရှင်းလင်းချက်) */
+.detail-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(150, 170, 112, 0.98);  */
+    /* color: white; */
+    padding: 15px;
+    box-sizing: border-box;
+    /* Animation အတွက် */
+    transform: translateY(100%); 
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.overlay-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: -100px;
+}
+
+.overlay-text {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Hover Effect: Overlay ကို မြင်အောင် ရွှေ့ပါ */
+.advantage-card:hover .detail-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ညာဘက်က မှိန်မှိန်လေး ပေါ်နေမည့် ကတ် */
+.advantage-card.next-faint {
+    opacity: 0.5;
+}
+
+/* ပုံအောက်က စာသားများ */
+.caption-box {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.advantage-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.advantage-detail {
+    font-size: 12px;
+    color: #99a8c7; 
+    margin: 5px 0 0 0;
+}
+/* Add these styles to your CSS */
+.advantage-card {
+    position: relative;
+}
+
+/* Edit Button Styles */
+.edit-card-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.advantage-card:hover .edit-card-btn {
+    opacity: 1;
+}
+
+.edit-card-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.advantage-card.editing .edit-card-btn {
+    background: #1a73e8;
+    color: white;
+    opacity: 1;
+}
+
+.advantage-card.editing .edit-card-btn i::before {
+    content: "\f00c"; /* Change to check icon when editing */
+}
+
+/* Editable Elements */
+.editable-text {
+    position: relative;
+    padding: 2px 0;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.advantage-card.editing .editable-text {
+    background: rgba(26, 115, 232, 0.1);
+    outline: 2px dashed #1a73e8;
+    padding: 2px 6px;
+    cursor: text;
+}
+
+.advantage-card.editing .editable-text:hover {
+    background: rgba(26, 115, 232, 0.15);
+}
+
+.editable-img {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.advantage-card.editing .editable-img {
+    cursor: pointer;
+}
+
+.advantage-card.editing .editable-img::after {
+    content: '\f030'; /* Camera icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    z-index: 5;
+}
+
+/* Responsive adjustments for edit elements */
+@media (max-width: 768px) {
+    .edit-card-btn {
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .advantage-card.editing .editable-img::after {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-card-btn {
+        width: 28px;
+        height: 28px;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .advantage-card.editing .editable-img::after {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+/* Carousel ခလုတ်များ */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* color: white; */
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+} */
+
+.prev-advantage-button {
+    left: 0;
+    /* Unicode arrow ဖြင့် အစားထိုးနိုင်သည် */
+    content: '<'; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFFFFF" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.next-advantage-button {
+    right: 0;
+    /* Unicode arrow ဖြင့် အစားထိုးနိုင်သည် */
+    content: '>'; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFFFFF" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-button:disabled {
+    opacity: 0; /* မလိုအပ်ပါက ဖျောက်ထားပါ */
+    cursor: default;
+}
+/* Add these styles to your CSS */
+.model-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Edit Button Styles */
+.edit-card-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.model-card:hover .edit-card-btn {
+    opacity: 1;
+}
+
+.edit-card-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.model-card.editing .edit-card-btn {
+    background: #1a73e8;
+    color: white;
+    opacity: 1;
+}
+
+.model-card.editing .edit-card-btn i::before {
+    content: "\f00c"; /* Change to check icon when editing */
+}
+
+/* Editable Elements */
+.editable-text {
+    position: relative;
+    padding: 2px 0;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.model-card.editing .editable-text {
+    background: rgba(26, 115, 232, 0.1);
+    outline: 2px dashed #1a73e8;
+    padding: 2px 6px;
+    cursor: text;
+}
+
+.model-card.editing .editable-text:hover {
+    background: rgba(26, 115, 232, 0.15);
+}
+
+.editable-img {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.model-card.editing .editable-img {
+    cursor: pointer;
+}
+
+.model-card.editing .editable-img::after {
+    content: '\f030'; /* Camera icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    z-index: 5;
+}
+
+/* Responsive adjustments for edit elements */
+@media (max-width: 768px) {
+    .edit-card-btn {
+        width: 32px;
+        height: 32px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .model-card.editing .editable-img::after {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-card-btn {
+        width: 28px;
+        height: 28px;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .model-card.editing .editable-img::after {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+} 
+/* Responsive ပုံစံ */
+@media (max-width: 1200px) {
+    .advantage-card {
+        flex: 0 0 calc(33.33% - 13.33px); /* ၃ ခုစီ ပြရန် */
+        max-width: calc(33.33% - 13.33px);
+    }
+}
+
+@media (max-width: 900px) {
+    .advantage-card {
+        flex: 0 0 calc(50% - 10px); /* ၂ ခုစီ ပြရန် */
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .advantage-carousel-wrapper {
+        padding: 0 20px;
+    }
+    .advantage-card {
+        flex: 0 0 100%; /* ၁ ခုစီ ပြရန် */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* helicopter */
+/* Container အခြေခံ ပုံစံ */
+.model-section {
+    width: 100%;
+    /* background-color: #0c1a32; မျက်နှာပြင် အများစုရဲ့ နောက်ခံအရောင် (အနက်ရောင်ခပ်ရင့်ရင့်) */
+    padding: 40px 20px 60px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.model-cards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card တစ်ခုချင်းစီ ပုံစံ */
+.model-card {
+    flex: 1;
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 4px;
+    text-align: center;
+}
+.deal-card {
+    position: relative;
+}
+
+/* edit icon (black) */
+.edit-card-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    z-index: 10;
+    color: #000; /* black icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* save button (subtle) */
+.save-card-btn {
+    position: absolute;
+    right: 8px;
+    top: 42px;
+    background: #dcd976;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    display: none;
+    z-index: 11;
+}
+
+/* inputs that look like inline text so layout doesn't break */
+.deal-card .edit-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 0 6px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* give price inputs some visual hint when editing */
+.deal-card .edit-input.price {
+    font-weight: 700;
+}
+
+/* keep card positioning */
+.deal-card { position: relative; }
+
+/* ပုံနှင့် Hover Effect အတွက် နေရာ */
+.image-box {
+    position: relative;
+    width: 100%;
+    /* ပုံရဲ့ အချိုးအစားအတိုင်း ဖြစ်စေရန် (သို့မဟုတ် height ကို ချိန်ညှိပါ) */
+    height: 220px; 
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.model-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+/* Detail Overlay (Hover လုပ်ရင် ပေါ်မယ့် အသေးစိတ် ရှင်းလင်းချက်) */
+.detail-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* ကတ်တစ်ခုလုံးကို ဖုံးထားရန် */
+    /* background-color: rgba(12, 26, 50, 0.95); နက်ပြာရောင် အကြည် */
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    
+    /* Animation အတွက် စာသားကို အပေါ်သို့ တင်ထားပြီး ပုံမှန်အားဖြင့် ဖျောက်ထားမည် */
+    transform: translateY(100%); 
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.overlay-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 35%; 
+    text-align: left;
+}
+
+/* Hover Effect: Overlay ကို မြင်အောင် ရွှေ့ပါ */
+.model-card:hover .detail-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Hover Effect: ပုံကို နည်းနည်းလေး ချဲ့ပါ */
+.model-card:hover .model-image {
+    transform: scale(1.05);
+}
+
+
+/* ပုံအောက်က စာသားများ */
+.caption-box {
+    /* background-color: #1a2a47; ပုံထဲက နက်ပြာရောင်အောက်ခံ */
+    padding: 15px 10px;
+}
+
+.model-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center; /* ပုံထဲကအတိုင်း အလယ်တည့်တည့် */
+}
+
+.model-seats {
+    font-size: 13px;
+    color: #99a8c7; /* ခဲရောင်ဖျော့ဖျော့ */
+    margin: 5px 0 0 0;
+    text-align: center; /* ပုံထဲကအတိုင်း အလယ်တည့်တည့် */
+}
+
+/* Responsive ပုံစံ */
+@media (max-width: 768px) {
+    .model-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .model-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .image-box {
+        height: 200px;
+    }
+}
